@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilities.Drivers;
 
-public class BisonTransportPage {
+public class BisonTransportPage extends BasePage {
 
     public BisonTransportPage() {
 
@@ -26,7 +26,7 @@ public class BisonTransportPage {
     @FindBy(xpath = "//a[contains(text(),'News')]")
     public WebElement News;
 
-    @FindBy(xpath = "//a[contains(text(),'Contact')]")
+    @FindBy(css = "header:nth-child(3) nav:nth-child(2) ul.nav.sidenav li:nth-child(6) > a:nth-child(1)")
     public WebElement Contact;
 
     @FindBy(xpath = "//a[contains(text(),'Blog')]")
@@ -62,15 +62,21 @@ public class BisonTransportPage {
             String actual = Blog.getText();
             Assert.assertEquals(expected, actual);
 
+        } else if (expected.equals(Contact.getText())) {
+                String actual = Contact.getText();
+                Assert.assertEquals(expected, actual);
         } else {
             String actual = Login.getText();
             Assert.assertEquals(expected, actual);
 
         }
     }
-    //Verifying READ HERE is visible.
+    //Verifying "READ HERE" is visible.
     public void verifyReadHere(String read) {
 
         Assert.assertTrue(ReadHere.isDisplayed());
+    }
+
+    public void verify(String read_here) {
     }
 }
