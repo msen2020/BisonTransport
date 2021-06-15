@@ -116,12 +116,11 @@ public class ShippingPage extends BasePage {
 
     //Clicking the Services link.
     public void ClickServicesLink() {
-        // Trying to make sure page loaded and all the elements visible.
 
+        // Trying to make sure page loaded and all the elements visible.
         Drivers.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         //to see the process putting 3 second wait.
-
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -146,6 +145,7 @@ public class ShippingPage extends BasePage {
 
     //Verifying the title that we are in Shipping Page
     public void VerifyUsersInShippingPage() {
+        System.out.println("You are on the shipping Page");
 
     }
 
@@ -185,7 +185,7 @@ public class ShippingPage extends BasePage {
     public void verification(){
 
     }
-    //iframe oldugundan
+    //iframe oldugundan switchiframe olusturuyoruz
     public void switchiframe(){
         Drivers.getDriver().switchTo().frame(iframe1);
     }
