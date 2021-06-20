@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Drivers;
 
+//Base page olusturmamizin amaci ortak kullandigimiz methodlari tekrar tekrar yamamak icin
 public class BasePage {
 
     public BasePage(){

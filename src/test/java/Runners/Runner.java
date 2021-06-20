@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/Features/",
         glue = "src/test/java/StepDefinitions/",
         tags = "@bisonTransport,@shippingDetails",
-        dryRun = true,
+        dryRun = false,
         plugin = {"html:target/default-cucumber-reports",
                 "json:target/cucumber.json",
                 "rerun:target/rerun.txt"

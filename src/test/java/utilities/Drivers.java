@@ -11,7 +11,6 @@ import javax.swing.*;
 
 public class Drivers {
     static WebDriver driver;
-
     public static WebDriver getDriver(){
         if( driver == null ){
             // properties dosyasının içerisindeki "browser" anahtarının

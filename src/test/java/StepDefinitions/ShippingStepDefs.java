@@ -11,7 +11,8 @@ public class ShippingStepDefs {
 
         ShippingPage shippingPage = new ShippingPage();
 
-        @Given("User clicks Services link on the home page")
+
+    @Given("User clicks Services link on the home page")
         public void user_clicks_services_link_on_the_home_page() {
         shippingPage.clickServicesLink.click();
         System.out.println("You are in the Services Page");
@@ -23,113 +24,104 @@ public class ShippingStepDefs {
         System.out.println("You are on the Request a Quote page");
         }
 
-        @Then("User selects Full Truckload under {string}")
-        public void user_selects_full_truckload_under(String string) throws InterruptedException {
-        Thread.sleep(2000);
-        shippingPage.selectFull_Truckload();
-}
+        @Then("User selects {string} under {string}")
+        public void user_selects_under(String string, String string2)  {
 
-        @Then("User selects Live load under {string}")
-        public void user_selects_live_load_under(String string) {
-        shippingPage.Live_Load.click();
-}
+        shippingPage.selectCheckBoxes(string);
+        //Thread.sleep(1000);
 
-        @Then("User selects Live Unload under {string}")
-        public void user_selects_live_unload_under(String string) {
-        shippingPage.Live_Unload.click();
-}
+        }
 
-        @Then("User selects KGS under LBS_KGS")
-        public void user_selects_kgs_under_lbs_kgs() {
+        @Then("User selects {string} under LBS_KGS")
+        public void user_selects_kgs_under_lbs_kgs(String KGS) {
         Select LBS_KGS = new Select(shippingPage.LBS_KGS);
-        LBS_KGS.selectByVisibleText("KGS");
+        LBS_KGS.selectByVisibleText(KGS);
         }
 
-        @Then("User enters {int} in the Shipment Weight text box")
-        public void user_enters_in_the_shipment_weight_text_box(Integer int1) {
-        shippingPage.Shipment_Weight.sendKeys("10000");
+        @Then("User enters {string} in the Shipment Weight text box")
+        public void user_enters_in_the_shipment_weight_text_box(String weight) {
+        shippingPage.Shipment_Weight.sendKeys(weight);
         }
 
-        @Then("User selects Dedicated under the This Shipment is")
-        public void user_selects_dedicated_under_the_this_shipment_is() {
+        @Then("User selects {string} under the This Shipment is")
+        public void user_selects_dedicated_under_the_this_shipment_is(String type) {
                shippingPage.Dedicated.click();
         }
 
-        @Then("User selects A Dry Trailer under the This Shipment Requires")
-        public void user_selects_a_dry_trailer_under_the_this_shipment_requires() {
+        @Then("User selects {string} under the This Shipment Requires")
+        public void user_selects_a_dry_trailer_under_the_this_shipment_requires(String str) {
                 shippingPage.A_Dry_Trailer.click();
         }
 
-        @Then("User selects United States under the Shipping from Country")
-        public void user_selects_united_states_under_the_shipping_from_country() {
+        @Then("User selects {string} under the Shipping from Country")
+        public void user_selects_united_states_under_the_shipping_from_country(String s) {
 
             // dropdowns
             Select Country = new Select(shippingPage.Country);
             Country.selectByVisibleText("United States");
         }
 
-        @Then("User enters Pennsylvania under the Shipping from States Province")
-        public void user_selects_pennsylvania_under_the_shipping_from_states_province() {
-                shippingPage.PickUp_State_Province.sendKeys("Pennsylvania");
+        @Then("User enters {string} under the Shipping from States Province")
+        public void user_selects_pennsylvania_under_the_shipping_from_states_province(String State) {
+                shippingPage.PickUp_State_Province.sendKeys(State);
         }
 
         @Then("User enters {string} under the Shipping from Postal Code")
-        public void user_enters_under_the_shipping_from_postal_code(String string) {
-                shippingPage.PickUp_Postal_Code_ZIP.sendKeys("19019");
+        public void user_enters_under_the_shipping_from_postal_code(String code) {
+                shippingPage.PickUp_Postal_Code_ZIP.sendKeys(code);
         }
 
-        @Then("User enters Pennsylvania under the Pick Up City")
-        public void user_selects_pennsylvania_under_the_pick_up_city() {
-                shippingPage.Pick_Up_City.sendKeys("Philadelphia");
+        @Then("User enters {string} under the Pick Up City")
+        public void user_selects_pennsylvania_under_the_pick_up_city(String city) {
+                shippingPage.Pick_Up_City.sendKeys(city);
         }
 
-        @Then("User selects Other under the Shipping to Country")
-        public void user_selects_other_under_the_shipping_to_country() {
+        @Then("User selects {string} under the Shipping to Country")
+        public void user_selects_other_under_the_shipping_to_country(String country) {
 
-            // dropdowns
-            // We are creating an object of *Select* and the corresponding
-            // class that we created
-            //then we select the text by using selectByVisibleText("text") method
-
+            /* dropdowns
+            We are creating an object of *Select* and the corresponding class that we created
+            then we select the text by using selectByVisibleText("text") method
+            */
             Select Shipping_To_Country = new Select(shippingPage.Shipping_To_Country);
-                Shipping_To_Country.selectByVisibleText("Other");
+            Shipping_To_Country.selectByVisibleText(country);
 
         }
 
-        @Then("User enters Spain under the Shipping to States Province")
-        public void user_selects_spain_under_the_shipping_to_states_province() {
-                shippingPage.Shipping_To_State.sendKeys("Spain");
+        @Then("User enters {string} under the Shipping to States Province")
+        public void user_selects_spain_under_the_shipping_to_states_province(String ShippingCountry) {
+                shippingPage.Shipping_To_State.sendKeys(ShippingCountry);
         }
 
         @Then("User enters {string} under the Shipping to Postal Code")
-        public void user_enters_under_the_shipping_to_postal_code(String string) {
-                shippingPage.Shipping_To_PostalCode.sendKeys("41007");
+        public void user_enters_under_the_shipping_to_postal_code(String shippingtoCode) {
+                shippingPage.Shipping_To_PostalCode.sendKeys(shippingtoCode);
         }
 
-        @Then("User enters Sevilla under the Delivery City")
-        public void user_selects_sevilla_under_the_delivery_city() {
-                shippingPage.Delivery_City.sendKeys("Sevilla");
+        @Then("User enters {string} under the Delivery City")
+        public void user_selects_sevilla_under_the_delivery_city(String shippngToCity) {
+                shippingPage.Delivery_City.sendKeys(shippngToCity);
         }
 
         @Then("User enters {string} in the Freight_Product Type text box")
-        public void user_enters_in_the_freight_product_type_text_box(String string) {
-                shippingPage.Freight_Product_Type.sendKeys("Timber");
+        public void user_enters_in_the_freight_product_type_text_box(String productType) {
+                shippingPage.Freight_Product_Type.sendKeys(productType);
         }
 
-        @Then("User selects One Time under the Number Of Loads")
-        public void user_selects_one_time_under_the_number_of_loads() {
+        @Then("User selects {string} under the Number Of Loads")
+        public void user_selects_one_time_under_the_number_of_loads(String number) {
 
             //dropdowns
 
             Select numberOfLoads = new Select(shippingPage.Number_Of_Loads);
-            numberOfLoads.selectByVisibleText("One Time");
+            numberOfLoads.selectByVisibleText(number);
         }
 
-        @Then("User selects Per Year under the Frequency")
-        public void user_selects_per_year_under_the_frequency() {
+        @Then("User selects {string} under the Frequency")
+        public void user_selects_per_year_under_the_frequency(String frequency) {
             //dropdowns
             Select Frequency = new Select(shippingPage.Frequency);
-            Frequency.selectByVisibleText("Per Year");
+            Frequency.selectByVisibleText(frequency);
         }
         // DATE
         // Select a Date from DatePicker
@@ -149,38 +141,38 @@ public class ShippingStepDefs {
             shippingPage.June_30.click();
         }
 
-        @Then("User enters {int} Euros under the {string}")
-        public void user_enters_euros_under_the(Integer int1, String string) {
+        @Then("User enters {string} Euros under the Cargo Value")
+        public void user_enters_euros_under_the_cargo_value(String value) {
 
-            shippingPage.Cargo_Value.sendKeys("100000 Euros");
+            shippingPage.Cargo_Value.sendKeys( value + " Euros");
         }
 
-        @Then("User enters Mehmet under the First Name")
-        public void user_enters_mehmet_under_the_first_name() {
-            shippingPage.FirstName.sendKeys("MEHMET");
+        @Then("User enters {string} under the First Name")
+        public void user_enters_under_the_first_name(String name) {
+            shippingPage.FirstName.sendKeys(name);
 
         }
 
-        @Then("User enters Sen\" under the \"Last Name\"")
-        public void user_enters_sen_under_the_last_name() {
-            shippingPage.LastName.sendKeys("Sen");
+        @Then("User enters {string} under the Last Name")
+        public void user_enters_under_the_last_name(String lastName) {
+            shippingPage.LastName.sendKeys(lastName);
 
         }
 
         @Then("User enters {string} under the Phone Number")
-        public void user_enters_under_the_phone_number(String string) {
-            shippingPage.PhoneNumber.sendKeys("+43671379791");
+        public void user_enters_under_the_phone_number(String phone) {
+            shippingPage.PhoneNumber.sendKeys(phone);
         }
 
        @Then("User enters {string} under the Company Name")
-       public void user_enters_under_the_company_name(String string) {
-       shippingPage.CompanyName.sendKeys("Shen");
+       public void user_enters_under_the_company_name(String companyName) {
+       shippingPage.CompanyName.sendKeys(companyName);
 
        }
 
-        @Then("User enters msen2020@hotmail.com under the Email")
-        public void user_enters_msen2020_hotmail_com_under_the_email() {
-            shippingPage.Email.sendKeys("msen2020@hotmail.com");
+        @Then("User enters {string} under the Email")
+        public void user_enters_under_the_email(String email) {
+            shippingPage.Email.sendKeys(email);
         }
 
         @Then("User clicks Submit button")
@@ -198,10 +190,10 @@ public class ShippingStepDefs {
         }
 
         @Then("User verifies that he sees {string}")
-        public void user_verifies_that_he_sees(String string) {
+        public void user_verifies_that_he_sees(String message) {
 
         shippingPage.verification();
-        System.out.println("Thank You for contacting us. One of our Account Managers will get back to you shortly.");
+        System.out.println(message);
 
         }
 

@@ -9,6 +9,9 @@ import java.util.concurrent.TimeUnit;
 
 public class ShippingPage extends BasePage {
 
+
+
+    //
     public ShippingPage() {
 
         PageFactory.initElements(Drivers.getDriver(), this);
@@ -129,8 +132,8 @@ public class ShippingPage extends BasePage {
         clickServicesLink.click();
 
     }
-
-    public void verifyClickRequest_a_Quote() {
+        // Clicking the ClickRequest_a_Quote
+    public void ClickRequest_a_Quote() {
 
         Drivers.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -149,45 +152,51 @@ public class ShippingPage extends BasePage {
 
     }
 
-    //User selects "Full Truckload" and "Live load" and "Live Unload" under "1. SELECT FREIGHT TYPE"
-    public void selectFull_Truckload() {
-        switchiframe();
-        Full_Truckload.click();
+    //User selects "Full Truckload" under "1. SELECT FREIGHT TYPE"
+    public void selectCheckBoxes(String a) {
+        try {
+            switchiframe();
+        }catch (Exception e){
+
+        }
+
+
+        if(a.equals("Full Truckload")) {
+            Full_Truckload.click();
+        }
+        if(a.equals("Live Unload")) {
+            Live_Unload.click();
+        }
+        if (a.equals("Live Load")) {
+            Live_Load.click();
+        }
+
     }
-    //User selects "Live load" under "1. SELECT FREIGHT TYPE"
 
-    public void selectLive_Load() {
-
-        Live_Load.click();
+    private void selectCheckBoxes(WebElement full_truckload, WebElement live_unload, WebElement live_load) {
     }
-
-    //User selects "Live Unload" under "1. SELECT FREIGHT TYPE"
-    public void selectLiveUnload(){
-
-        Live_Unload.click();
-}
-    //User selects "DryTrailer" under "1. SELECT FREIGHT TYPE"
 
     public void selectADryTrailer() {
         scrollDown(A_Dry_Trailer);
         A_Dry_Trailer.click();
     }
 
-
-
     //Verifying the user is on the Result page.
-
     public void verifyUserOnTheResultPage(){
 
     }
-    //Verifying the user sees the message on the Result page.
-    //"Thank You for contacting us. One of our Account Managers will get back to you shortly.
+
+    /*
+    Verifying the user sees the message on the Result page.
+    "Thank You for contacting us. One of our Account Managers will get back to you shortly.
+    */
     public void verification(){
 
     }
     //iframe oldugundan switchiframe olusturuyoruz
     public void switchiframe(){
         Drivers.getDriver().switchTo().frame(iframe1);
+
     }
 
     }
