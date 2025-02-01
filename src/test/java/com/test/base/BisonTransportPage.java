@@ -1,0 +1,74 @@
+package com.test.base;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class BisonTransportPage {
+
+    @FindBy(xpath = "//a[contains(text(),'About')]")
+    public WebElement About;
+
+    @FindBy(xpath = "//a[contains(text(),'Services')]")
+    public WebElement Services;
+
+    @FindBy(xpath = "//a[contains(text(),'Careers')]")
+    public WebElement Careers;
+
+    @FindBy(xpath = "//a[contains(text(),'News')]")
+    public WebElement News;
+
+    @FindBy(css = "header:nth-child(3) nav:nth-child(2) ul.nav.sidenav li:nth-child(6) > a:nth-child(1)")
+    public WebElement Contact;
+
+    @FindBy(xpath = "//a[contains(text(),'Blog')]")
+    public WebElement Blog;
+
+    @FindBy(xpath = "//a[contains(text(),'Login')]")
+    public WebElement Login;
+
+    @FindBy(xpath = "//a[contains(text(),'READ HERE')]")
+    public WebElement ReadHere;
+
+
+    //Verifying Web elements visibility.
+    public void verification(String expected) {
+
+        if (expected.equals(About.getText())) {
+            String actual = About.getText();
+            Assert.assertEquals(expected, actual);
+
+        } else if (expected.equals(Services.getText())) {
+            String actual = Services.getText();
+            Assert.assertEquals(expected, actual);
+
+        } else if (expected.equals(Careers.getText())) {
+            String actual = Careers.getText();
+            Assert.assertEquals(expected, actual);
+
+        } else if (expected.equals(News.getText())) {
+            String actual = News.getText();
+            Assert.assertEquals(expected, actual);
+
+        } else if (expected.equals(Blog.getText())) {
+            String actual = Blog.getText();
+            Assert.assertEquals(expected, actual);
+
+        } else if (expected.equals(Contact.getText())) {
+            String actual = Contact.getText();
+            Assert.assertEquals(expected, actual);
+        } else {
+            String actual = Login.getText();
+            Assert.assertEquals(expected, actual);
+
+        }
+    }
+    //Verifying "READ HERE" is visible.
+    public void verifyReadHere(String read) {
+
+        Assert.assertTrue(ReadHere.isDisplayed());
+    }
+
+    public void verify(String read_here) {
+    }
+}
