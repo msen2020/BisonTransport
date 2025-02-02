@@ -8,11 +8,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.time.Duration;
 
-import static com.test.utils.WebDriverManager.driver;
+import static com.test.webDriverManager.WebDriverManager.driver;
 
 public class BrowserUtils {
     private static final Logger logger = LoggerFactory.getLogger(BrowserUtils.class);
-    private static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    private static final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    private static final Duration DEFAULT_TIMEOUT = Duration.ofSeconds(10);
+    private static final Duration LONG_TIMEOUT = Duration.ofSeconds(25);
 
     public static void scrollDown(WebElement element) {
         try {
@@ -123,6 +125,47 @@ public class BrowserUtils {
         } catch (Exception e) {
             logger.error("Error waiting for element to be clickable: {}", e.getMessage());
             throw e;
+        }
+    }
+
+    /**
+     * Waits for the URL to change from a given URL with a configurable timeout.
+     * 
+     * @param oldUrl The URL to change from
+     * @param timeoutSeconds Maximum time to wait in seconds
+     * @return true if URL changed, false if timeout occurred
+     */
+    public static boolean waitForUrlChange(String oldUrl, int timeoutSeconds) {
+        try {
+            logger.debug("Waiting for URL to change from: {} (timeout: {}s)", oldUrl, timeoutSeconds);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
+            
+            return wait.until(webDriver -> {
+                String newUrl = webDriver.getCurrentUrl();
+                boolean changed = !newUrl.equals(oldUrl);
+                logger.debug("Current URL: {} - Changed: {}", newUrl, changed);
+                return changed;
+            });
+            
+        } catch (Exception e) {
+            logger.error("Error waiting for URL change from {}: {}", oldUrl, e.getMessage());
+            return false;
+        }
+    }
+
+    /**
+     * Waits for the URL to change from a given URL with default timeout.
+     * 
+     * @param oldUrl The URL to change from
+     * @throws RuntimeException if URL doesn't change within default timeout
+     */
+    public static void waitForUrlChange(String oldUrl) {
+        if (!waitForUrlChange(oldUrl, DEFAULT_TIMEOUT.getSeconds())) {
+            String currentUrl = driver.getCurrentUrl();
+            throw new RuntimeException(String.format(
+                "URL did not change from '%s' within %d seconds. Current URL: '%s'",
+                oldUrl, DEFAULT_TIMEOUT.getSeconds(), currentUrl
+            ));
         }
     }
 } 

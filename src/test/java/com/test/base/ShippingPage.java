@@ -3,19 +3,11 @@ package com.test.base;
 import com.test.utils.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
-
-import org.openqa.selenium.JavascriptExecutor;
 
 public class ShippingPage extends CommonPage {
 
-    private WebDriverWait wait;
-
     public ShippingPage() {
         super(); // This will call CommonPage constructor
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     @FindBy(xpath = "//body/article[1]/div[1]/div[1]/div[2]/div[1]/a[1]/img[1]")
@@ -132,12 +124,6 @@ public class ShippingPage extends CommonPage {
         clickRequest_a_Quote.click();
     }
 
-    //Verifying the title that we are in Shipping Page
-    public void VerifyusersInShippingPage() {
-        System.out.println("You are on the shipping Page");
-
-    }
-
     //user selects "Full Truckload" under "1. SELECT FREIGHT TYPE"
     public void selectCheckBoxes(String a) {
         try {
@@ -160,62 +146,5 @@ public class ShippingPage extends CommonPage {
     private void selectCheckBoxes(WebElement full_truckload, WebElement live_unload, WebElement live_load) {
     }
 
-    public void selectADryTrailer() {
-        BrowserUtils.scrollDown(A_Dry_Trailer);
-        A_Dry_Trailer.click();
-    }
 
-    //Verifying the user is on the Result page.
-    public void verifyuserOnTheResultPage(){
-
-    }
-
-    /*
-    Verifying the user sees the message on the Result page.
-    "Thank You for contacting us. One of our Account Managers will get back to you shortly.
-    */
-    public void verification(){
-
-    }
-    public void switchiframe(){
-        BrowserUtils.switchToIframe(iframe1);
-    }
-
-    // Example method showing proper WebDriver usage
-    public void waitAndClick(WebElement element) {
-        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
-    }
-
-    // Example method for switching to iframe
-    public void switchToIframe(WebElement iframe) {
-        driver.switchTo().frame(iframe);
-    }
-
-    // Example method for switching back to default content
-    public void switchToDefaultContent() {
-        driver.switchTo().defaultContent();
-    }
-
-    // Add your other methods here, using 'driver' directly instead of 'driver'
-    // For example:
-    public String getCurrentUrl() {
-        return driver.getCurrentUrl();
-    }
-
-    public String getTitle() {
-        return driver.getTitle();
-    }
-
-    public void navigateTo(String url) {
-        driver.get(url);
-    }
-
-    public void scrollDown(WebElement element) {
-        try {
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-            Thread.sleep(500); // Small pause to let the scroll complete
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 }

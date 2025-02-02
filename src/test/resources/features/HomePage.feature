@@ -13,3 +13,15 @@ Feature: Home Page Navigation Bar
       | Talk to an Expert |
       | Request Quote     |
 
+  Scenario: asas
+    Given user goes to Bison Transport page
+
+    And user clicks the link About
+    Then user verifies the links are visible & functional
+      | Who We Are                         |
+      | Leadership                         |
+      | Our Culture                        |
+      | History                            |
+      | Environmental, Social & Governance |
+      | Blog                               |
+

@@ -1,6 +1,6 @@
 package com.test.base;
 
-import com.test.utils.WebDriverManager;
+import com.test.webDriverManager.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
