@@ -114,4 +114,15 @@ public class BrowserUtils {
             throw e;
         }
     }
+
+    public static void waitForElementToBeClickable(WebElement element) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            logger.debug("Element is now clickable");
+        } catch (Exception e) {
+            logger.error("Error waiting for element to be clickable: {}", e.getMessage());
+            throw e;
+        }
+    }
 } 

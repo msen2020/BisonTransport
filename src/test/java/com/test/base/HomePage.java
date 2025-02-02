@@ -11,7 +11,7 @@ public class HomePage extends CommonPage {
         super();
     }
 
-    @FindBy(css = ".nav-menu li a")
+    @FindBy(css = ".x-menu-first-level > li > a .x-anchor-text-primary")
     private List<WebElement> navbarTitles;
 
     public List<WebElement> getNavbarTitles() {
@@ -21,6 +21,15 @@ public class HomePage extends CommonPage {
     public boolean isNavTitleVisible(String title) {
         try {
             logger.debug("Current number of navbar elements: {}", getNavbarTitles().size());
+            
+            getNavbarTitles().forEach(element -> {
+                try {
+                    logger.debug("Found menu item: '{}', Displayed: {}", 
+                            element.getText().trim(), element.isDisplayed());
+                } catch (Exception e) {
+                    logger.debug("Error reading menu item: {}", e.getMessage());
+                }
+            });
             
             if (!getNavbarTitles().isEmpty()) {
                 BrowserUtils.waitForVisibility(getNavbarTitles().getFirst());
@@ -80,5 +89,27 @@ public class HomePage extends CommonPage {
                 .filter(element -> element.getText().trim().equalsIgnoreCase(title))
                 .findFirst()
                 .ifPresent(WebElement::click);
+    }
+
+    public boolean isNavTitleClickable(String title) {
+        try {
+            return getNavbarTitles().stream()
+                    .filter(element -> element.getText().trim().equalsIgnoreCase(title))
+                    .findFirst()
+                    .map(element -> {
+                        try {
+                            BrowserUtils.waitForElementToBeClickable(element);
+                            return true;
+                        } catch (Exception e) {
+                            logger.debug("Element not clickable: {}", e.getMessage());
+                            return false;
+                        }
+                    })
+                    .orElse(false);
+        } catch (Exception e) {
+            logger.error("Error checking if navbar title is clickable '{}': {}", 
+                    title, e.getMessage());
+            return false;
+        }
     }
 } 

@@ -15,25 +15,19 @@ public class HomePageSteps {
     private static final Logger logger = LoggerFactory.getLogger(HomePageSteps.class);
     private final HomePage homePage = new HomePage();
 
-    @Then("user verifies the titles are displayed in the navbar")
-    public void user_verifies_the_titles_are_displayed_in_the_navbar(DataTable dataTable) {
+    @Then("user verifies the titles are displayed & functional in the navbar")
+    public void user_verifies_the_titles_are_displayed_and_functional(DataTable dataTable) {
         List<String> expectedTitles = dataTable.asList();
         
-        logger.info("Starting verification of navbar titles");
+        logger.info("Starting verification of navbar titles visibility and functionality");
         BrowserUtils.waitForPageToLoad(25);
-        
-        // Add a small wait after the page load
         BrowserUtils.sleep(2);
         
-        // Get current URL for debugging using WebDriverManager
         String currentUrl = WebDriverManager.getInstance().getCurrentDriver().getCurrentUrl();
-        logger.info("Current URL: {}", currentUrl);
-        
-        // Get page source length for debugging using WebDriverManager
-        String pageSource = WebDriverManager.getInstance().getCurrentDriver().getPageSource();
-        logger.info("Page source length: {}", pageSource.length());
+        logger.info("Starting URL: {}", currentUrl);
         
         for (String expectedTitle : expectedTitles) {
+            // Verify visibility
             boolean isVisible = homePage.isNavTitleVisible(expectedTitle);
             String actualText = homePage.getNavTitleText(expectedTitle);
             
@@ -45,9 +39,33 @@ public class HomePageSteps {
             Assert.assertEquals("Navbar title text should match", 
                     expectedTitle, actualText.trim());
             
-            logger.info("Successfully verified navbar title: {}", expectedTitle);
+            // Verify clickability and navigation
+            boolean isClickable = homePage.isNavTitleClickable(expectedTitle);
+            Assert.assertTrue("Navbar title '" + expectedTitle + "' should be clickable", 
+                    isClickable);
+            
+            // Store current URL before clicking
+            String urlBeforeClick = WebDriverManager.getInstance().getCurrentDriver().getCurrentUrl();
+            
+            // Click the title
+            homePage.clickNavTitle(expectedTitle);
+            BrowserUtils.waitForPageToLoad(10);
+            
+            // Get new URL after click
+            String urlAfterClick = WebDriverManager.getInstance().getCurrentDriver().getCurrentUrl();
+            
+            // Verify URL changed (navigation occurred)
+            Assert.assertNotEquals("URL should change after clicking " + expectedTitle, 
+                    urlBeforeClick, urlAfterClick);
+            
+            logger.info("Successfully verified navbar title functionality: {} - URL changed from {} to {}", 
+                    expectedTitle, urlBeforeClick, urlAfterClick);
+            
+            // Navigate back to main page for next iteration
+            WebDriverManager.getInstance().getCurrentDriver().navigate().back();
+            BrowserUtils.waitForPageToLoad(10);
         }
         
-        logger.info("All navbar titles verified successfully");
+        logger.info("All navbar titles verified successfully for visibility and functionality");
     }
 } 

@@ -112,3 +112,96 @@
 2025-02-02 01:08:10.844 [main] ERROR com.test.base.CommonPage - No navbar elements found
 2025-02-02 01:08:10.863 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'About' - Visible: false, Actual text: ''
 2025-02-02 01:08:10.876 [main] INFO  com.test.hooks.Hooks - Keeping browser open for UI inspection
+2025-02-02 01:54:33.317 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 01:54:33.370 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 01:54:34.885 [main] INFO  com.test.utils.WebDriverManager - Created new chrome driver instance
+2025-02-02 01:54:34.886 [main] INFO  com.test.hooks.Hooks - Browser initialized using Singleton WebDriverManager
+2025-02-02 01:55:12.901 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 01:55:12.920 [main] INFO  c.test.stepDefinitions.HomePageSteps - Starting verification of navbar titles
+2025-02-02 01:55:15.008 [main] INFO  c.test.stepDefinitions.HomePageSteps - Current URL: https://www.bisontransport.com/
+2025-02-02 01:55:15.078 [main] INFO  c.test.stepDefinitions.HomePageSteps - Page source length: 255285
+2025-02-02 01:55:15.162 [main] INFO  com.test.hooks.Hooks - Keeping browser open for UI inspection
+2025-02-02 15:23:09.225 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 15:23:09.325 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 15:23:12.011 [main] INFO  com.test.utils.WebDriverManager - Created new chrome driver instance
+2025-02-02 15:23:12.011 [main] INFO  com.test.hooks.Hooks - Browser initialized using Singleton WebDriverManager
+2025-02-02 15:23:14.356 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 15:23:14.382 [main] INFO  c.test.stepDefinitions.HomePageSteps - Starting verification of navbar titles
+2025-02-02 15:23:16.463 [main] INFO  c.test.stepDefinitions.HomePageSteps - Current URL: https://www.bisontransport.com/
+2025-02-02 15:23:16.564 [main] INFO  c.test.stepDefinitions.HomePageSteps - Page source length: 255372
+2025-02-02 15:23:16.651 [main] INFO  com.test.hooks.Hooks - Keeping browser open for UI inspection
+2025-02-02 15:26:31.419 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 15:26:31.470 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 15:26:33.303 [main] INFO  com.test.utils.WebDriverManager - Created new chrome driver instance
+2025-02-02 15:26:33.304 [main] INFO  com.test.hooks.Hooks - Browser initialized using Singleton WebDriverManager
+2025-02-02 15:26:36.238 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 15:26:36.267 [main] INFO  c.test.stepDefinitions.HomePageSteps - Starting verification of navbar titles
+2025-02-02 15:26:38.330 [main] INFO  c.test.stepDefinitions.HomePageSteps - Current URL: https://www.bisontransport.com/
+2025-02-02 15:26:41.850 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'About' - Visible: true, Actual text: 'About'
+2025-02-02 15:26:41.888 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title: About
+2025-02-02 15:26:45.582 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Careers' - Visible: true, Actual text: 'Careers'
+2025-02-02 15:26:45.583 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title: Careers
+2025-02-02 15:26:49.425 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Shippers' - Visible: true, Actual text: 'Shippers'
+2025-02-02 15:26:49.425 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title: Shippers
+2025-02-02 15:26:53.564 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Carriers' - Visible: true, Actual text: 'Carriers'
+2025-02-02 15:26:53.565 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title: Carriers
+2025-02-02 15:26:57.828 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Locations' - Visible: true, Actual text: 'Locations'
+2025-02-02 15:26:57.828 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title: Locations
+2025-02-02 15:27:02.113 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Contact' - Visible: true, Actual text: 'Contact'
+2025-02-02 15:27:02.113 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title: Contact
+2025-02-02 15:27:10.097 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Talk to an Expert' - Visible: true, Actual text: 'Talk to an Expert'
+2025-02-02 15:27:10.097 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title: Talk to an Expert
+2025-02-02 15:27:18.523 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Request Quote' - Visible: true, Actual text: 'Request Quote'
+2025-02-02 15:27:18.523 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title: Request Quote
+2025-02-02 15:27:18.523 [main] INFO  c.test.stepDefinitions.HomePageSteps - All navbar titles verified successfully
+2025-02-02 15:27:18.524 [main] INFO  com.test.hooks.Hooks - Keeping browser open for UI inspection
+2025-02-02 15:29:55.285 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 15:29:55.349 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 15:29:57.731 [main] INFO  com.test.utils.WebDriverManager - Created new chrome driver instance
+2025-02-02 15:29:57.732 [main] INFO  com.test.hooks.Hooks - Browser initialized using Singleton WebDriverManager
+2025-02-02 15:29:59.863 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 15:29:59.890 [main] INFO  c.test.stepDefinitions.HomePageSteps - Starting verification of navbar titles visibility and functionality
+2025-02-02 15:30:01.945 [main] INFO  c.test.stepDefinitions.HomePageSteps - Starting URL: https://www.bisontransport.com/
+2025-02-02 15:30:05.729 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'About' - Visible: true, Actual text: 'About'
+2025-02-02 15:30:08.259 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: About - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/about
+2025-02-02 15:30:10.120 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Careers' - Visible: true, Actual text: 'Careers'
+2025-02-02 15:30:13.620 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Careers - URL changed from https://www.bisontransport.com/ to https://careers.bisontransport.com/ca/en
+2025-02-02 15:30:16.209 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Shippers' - Visible: true, Actual text: 'Shippers'
+2025-02-02 15:30:18.944 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Shippers - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/shippers
+2025-02-02 15:30:23.853 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Carriers' - Visible: true, Actual text: 'Carriers'
+2025-02-02 15:30:25.651 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Carriers - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/carriers
+2025-02-02 15:30:30.351 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Locations' - Visible: true, Actual text: 'Locations'
+2025-02-02 15:30:32.385 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Locations - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/location
+2025-02-02 15:30:37.278 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Contact' - Visible: true, Actual text: 'Contact'
+2025-02-02 15:30:39.114 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Contact - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/contact
+2025-02-02 15:30:46.207 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Talk to an Expert' - Visible: true, Actual text: 'Talk to an Expert'
+2025-02-02 15:30:50.829 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Talk to an Expert - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/talk-to-an-expert
+2025-02-02 15:30:54.729 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Request Quote' - Visible: true, Actual text: 'Request Quote'
+2025-02-02 15:30:57.065 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Request Quote - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/request-quote
+2025-02-02 15:30:57.126 [main] INFO  c.test.stepDefinitions.HomePageSteps - All navbar titles verified successfully for visibility and functionality
+2025-02-02 15:30:57.127 [main] INFO  com.test.hooks.Hooks - Keeping browser open for UI inspection
+2025-02-02 15:32:01.861 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 15:32:02.007 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 15:32:04.962 [main] INFO  com.test.utils.WebDriverManager - Created new chrome driver instance
+2025-02-02 15:32:04.962 [main] INFO  com.test.hooks.Hooks - Browser initialized using Singleton WebDriverManager
+2025-02-02 15:32:07.368 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 15:32:07.377 [main] INFO  c.test.stepDefinitions.HomePageSteps - Starting verification of navbar titles visibility and functionality
+2025-02-02 15:32:09.455 [main] INFO  c.test.stepDefinitions.HomePageSteps - Starting URL: https://www.bisontransport.com/
+2025-02-02 15:32:11.676 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'About' - Visible: true, Actual text: 'About'
+2025-02-02 15:32:14.420 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: About - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/about
+2025-02-02 15:32:18.170 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Careers' - Visible: true, Actual text: 'Careers'
+2025-02-02 15:32:20.816 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Careers - URL changed from https://www.bisontransport.com/ to https://careers.bisontransport.com/ca/en
+2025-02-02 15:32:27.068 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Shippers' - Visible: true, Actual text: 'Shippers'
+2025-02-02 15:32:29.574 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Shippers - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/shippers
+2025-02-02 15:32:33.353 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Carriers' - Visible: true, Actual text: 'Carriers'
+2025-02-02 15:32:35.347 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Carriers - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/carriers
+2025-02-02 15:32:39.618 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Locations' - Visible: true, Actual text: 'Locations'
+2025-02-02 15:32:41.582 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Locations - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/location
+2025-02-02 15:32:46.451 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Contact' - Visible: true, Actual text: 'Contact'
+2025-02-02 15:32:50.457 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Contact - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/contact
+2025-02-02 15:32:59.487 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Talk to an Expert' - Visible: true, Actual text: 'Talk to an Expert'
+2025-02-02 15:33:07.934 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Talk to an Expert - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/talk-to-an-expert
+2025-02-02 15:33:11.290 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking navbar title: 'Request Quote' - Visible: true, Actual text: 'Request Quote'
+2025-02-02 15:33:13.668 [main] INFO  c.test.stepDefinitions.HomePageSteps - Successfully verified navbar title functionality: Request Quote - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/request-quote
+2025-02-02 15:33:13.728 [main] INFO  c.test.stepDefinitions.HomePageSteps - All navbar titles verified successfully for visibility and functionality
+2025-02-02 15:33:13.729 [main] INFO  com.test.hooks.Hooks - Keeping browser open for UI inspection
