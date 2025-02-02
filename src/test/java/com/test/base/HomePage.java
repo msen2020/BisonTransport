@@ -1,8 +1,8 @@
 package com.test.base;
 
+import com.test.utils.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
@@ -11,23 +11,8 @@ public class HomePage extends CommonPage {
         super();
     }
 
-    @FindBy(css = "nav.main-nav ul.menu li a")
+    @FindBy(css = ".nav-menu li a")
     private List<WebElement> navbarTitles;
-
-    @FindBy(linkText = "Services")
-    private WebElement servicesLink;
-
-    @FindBy(linkText = "About Us")
-    private WebElement aboutUsLink;
-
-    @FindBy(linkText = "Careers")
-    private WebElement careersLink;
-
-    @FindBy(linkText = "Contact")
-    private WebElement contactLink;
-
-    @FindBy(linkText = "News & Events")
-    private WebElement newsEventsLink;
 
     public List<WebElement> getNavbarTitles() {
         return navbarTitles;
@@ -35,20 +20,59 @@ public class HomePage extends CommonPage {
 
     public boolean isNavTitleVisible(String title) {
         try {
-            return getNavbarTitles().stream()
-                    .anyMatch(element -> element.isDisplayed() &&
-                            element.getText().trim().equalsIgnoreCase(title));
+            logger.debug("Current number of navbar elements: {}", getNavbarTitles().size());
+            
+            if (!getNavbarTitles().isEmpty()) {
+                BrowserUtils.waitForVisibility(getNavbarTitles().getFirst());
+            } else {
+                logger.error("No navbar elements found");
+                return false;
+            }
+
+            boolean isVisible = getNavbarTitles().stream()
+                    .anyMatch(element -> {
+                        try {
+                            boolean displayed = element.isDisplayed();
+                            String text = element.getText().trim();
+                            logger.debug("Found navbar element - Displayed: {}, Text: '{}'", 
+                                    displayed, text);
+                            return displayed && text.equalsIgnoreCase(title);
+                        } catch (Exception e) {
+                            logger.debug("Error checking element: {}", e.getMessage());
+                            return false;
+                        }
+                    });
+
+            logger.debug("Visibility check for '{}': {}", title, isVisible);
+            return isVisible;
+
         } catch (Exception e) {
+            logger.error("Error checking visibility of navbar title '{}': {}", 
+                    title, e.getMessage());
             return false;
         }
     }
 
     public String getNavTitleText(String title) {
-        return getNavbarTitles().stream()
-                .filter(element -> element.getText().trim().equalsIgnoreCase(title))
-                .findFirst()
-                .map(WebElement::getText)
-                .orElse("");
+        try {
+            return getNavbarTitles().stream()
+                    .filter(element -> {
+                        try {
+                            String text = element.getText().trim();
+                            logger.debug("Checking element text: '{}'", text);
+                            return text.equalsIgnoreCase(title);
+                        } catch (Exception e) {
+                            logger.debug("Error getting element text: {}", e.getMessage());
+                            return false;
+                        }
+                    })
+                    .findFirst()
+                    .map(WebElement::getText)
+                    .orElse("");
+        } catch (Exception e) {
+            logger.error("Error getting navbar title text for '{}': {}", title, e.getMessage());
+            return "";
+        }
     }
 
     public void clickNavTitle(String title) {

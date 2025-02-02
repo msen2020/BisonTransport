@@ -26,6 +26,5 @@ public class LoginSteps extends CommonPage {
                 actualTitle.contains("Bison"));
 
         logger.info("Successfully verified page title contains 'Bison'");
-
     }
 }

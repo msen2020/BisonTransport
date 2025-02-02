@@ -2,6 +2,7 @@ package com.test.stepDefinitions;
 
 import com.test.base.HomePage;
 import com.test.utils.BrowserUtils;
+import com.test.utils.WebDriverManager;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
@@ -14,29 +15,39 @@ public class HomePageSteps {
     private static final Logger logger = LoggerFactory.getLogger(HomePageSteps.class);
     private final HomePage homePage = new HomePage();
 
-    @Given("user is on the Bison Transport homepage")
-    public void user_is_on_the_bison_transport_homepage() {
-        logger.info("Verifying user is on Bison Transport homepage");
-        String expectedTitle = "Bison Transport";
-        Assert.assertTrue("Page title should contain '" + expectedTitle + "'",
-                BrowserUtils.getTitle().contains(expectedTitle));
-    }
-
-    @Then("user should see the following titles in navbar")
-    public void user_should_see_the_following_titles_in_navbar(DataTable dataTable) {
+    @Then("user verifies the titles are displayed in the navbar")
+    public void user_verifies_the_titles_are_displayed_in_the_navbar(DataTable dataTable) {
         List<String> expectedTitles = dataTable.asList();
         
-        logger.info("Verifying navbar titles: {}", expectedTitles);
+        logger.info("Starting verification of navbar titles");
+        BrowserUtils.waitForPageToLoad(25);
+        
+        // Add a small wait after the page load
+        BrowserUtils.sleep(2);
+        
+        // Get current URL for debugging using WebDriverManager
+        String currentUrl = WebDriverManager.getInstance().getCurrentDriver().getCurrentUrl();
+        logger.info("Current URL: {}", currentUrl);
+        
+        // Get page source length for debugging using WebDriverManager
+        String pageSource = WebDriverManager.getInstance().getCurrentDriver().getPageSource();
+        logger.info("Page source length: {}", pageSource.length());
         
         for (String expectedTitle : expectedTitles) {
             boolean isVisible = homePage.isNavTitleVisible(expectedTitle);
-            Assert.assertTrue("Navbar title '" + expectedTitle + "' should be visible",
-                    isVisible);
-
             String actualText = homePage.getNavTitleText(expectedTitle);
-            Assert.assertEquals("Navbar title text should match",
+            
+            logger.info("Checking navbar title: '{}' - Visible: {}, Actual text: '{}'", 
+                    expectedTitle, isVisible, actualText);
+            
+            Assert.assertTrue("Navbar title '" + expectedTitle + "' should be visible", 
+                    isVisible);
+            Assert.assertEquals("Navbar title text should match", 
                     expectedTitle, actualText.trim());
+            
             logger.info("Successfully verified navbar title: {}", expectedTitle);
         }
+        
+        logger.info("All navbar titles verified successfully");
     }
 } 

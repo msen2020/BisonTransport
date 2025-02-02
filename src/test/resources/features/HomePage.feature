@@ -1,12 +1,15 @@
 Feature: Home Page Navigation Bar
 
-  @homepage @smoke
+  @HP_01 @homepage @smoke
   Scenario: TC_01 Verify navbar titles are visible
-    Given user is on the Bison Transport homepage
-    Then user should see the following titles in navbar
-      | Services      |
-      | About Us      |
-      | Careers       |
-      | Contact       |
-      | News & Events |
+    Given user goes to Bison Transport page
+    Then user verifies the titles are displayed in the navbar
+      | About             |
+      | Careers           |
+      | Shippers          |
+      | Carriers          |
+      | Locations         |
+      | Contact           |
+      | Talk to an Expert |
+      | Request Quote     |
 

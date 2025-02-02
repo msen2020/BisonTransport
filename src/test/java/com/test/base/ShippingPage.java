@@ -1,16 +1,12 @@
 package com.test.base;
 
 import com.test.utils.BrowserUtils;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
-import java.util.concurrent.TimeUnit;
-
-import static com.test.utils.WebDriverManager.driver;
 import org.openqa.selenium.JavascriptExecutor;
 
 public class ShippingPage extends CommonPage {

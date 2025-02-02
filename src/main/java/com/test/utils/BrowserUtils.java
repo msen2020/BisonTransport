@@ -98,4 +98,20 @@ public class BrowserUtils {
             throw e;
         }
     }
+
+    /**
+     * Waits for the page to load completely by checking document.readyState
+     * @param timeoutInSeconds maximum time to wait in seconds
+     */
+    public static void waitForPageToLoad(int timeoutInSeconds) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+            wait.until(webDriver -> ((JavascriptExecutor) webDriver)
+                    .executeScript("return document.readyState").equals("complete"));
+            logger.debug("Page loaded completely");
+        } catch (Exception e) {
+            logger.error("Error waiting for page to load: {}", e.getMessage());
+            throw e;
+        }
+    }
 } 
