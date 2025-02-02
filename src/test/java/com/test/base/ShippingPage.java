@@ -6,13 +6,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class ShippingPage extends CommonPage {
 
-    public ShippingPage() {
-        super(); // This will call CommonPage constructor
-    }
-
     @FindBy(xpath = "//body/article[1]/div[1]/div[1]/div[2]/div[1]/a[1]/img[1]")
     public WebElement clickServicesLink;
-
 
     @FindBy(xpath = "//a[contains(text(),'Request a Quote')]")
     public WebElement clickRequest_a_Quote;
@@ -142,9 +137,5 @@ public class ShippingPage extends CommonPage {
             Live_Load.click();
         }
     }
-
-    private void selectCheckBoxes(WebElement full_truckload, WebElement live_unload, WebElement live_load) {
-    }
-
 
 }

@@ -13,7 +13,7 @@ Feature: Home Page Navigation Bar
       | Talk to an Expert |
       | Request Quote     |
 
-  Scenario: asas
+  Scenario: asks
     Given user goes to Bison Transport page
 
     And user clicks the link About

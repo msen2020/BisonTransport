@@ -3,19 +3,28 @@ package com.test.base;
 import com.test.utils.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.By;
+import static com.test.hooks.Hooks.actions;
 
 import java.util.List;
 
 public class HomePage extends CommonPage {
-    private final Actions actions;
 
-    public HomePage() {
-        super();
-        this.actions = new Actions(driver);
-    }
+    @FindBy(linkText = "Services")
+    protected WebElement servicesLink;
+
+    @FindBy(linkText = "About Us")
+    protected WebElement aboutUsLink;
+
+    @FindBy(linkText = "Careers")
+    protected WebElement careersLink;
+
+    @FindBy(linkText = "Contact")
+    protected WebElement contactLink;
+
+    @FindBy(linkText = "News & Events")
+    protected WebElement newsEventsLink;
 
     @FindBy(css = ".x-menu-first-level > li > a .x-anchor-text-primary")
     private List<WebElement> navbarTitles;
@@ -74,35 +83,6 @@ public class HomePage extends CommonPage {
         }
     }
 
-    public String getNavTitleText(String title) {
-        try {
-            return getNavbarTitles().stream()
-                    .filter(element -> {
-                        try {
-                            String text = element.getText().trim();
-                            logger.debug("Checking element text: '{}'", text);
-                            return text.equalsIgnoreCase(title);
-                        } catch (Exception e) {
-                            logger.debug("Error getting element text: {}", e.getMessage());
-                            return false;
-                        }
-                    })
-                    .findFirst()
-                    .map(WebElement::getText)
-                    .orElse("");
-        } catch (Exception e) {
-            logger.error("Error getting navbar title text for '{}': {}", title, e.getMessage());
-            return "";
-        }
-    }
-
-    public void clickNavTitle(String title) {
-        getNavbarTitles().stream()
-                .filter(element -> element.getText().trim().equalsIgnoreCase(title))
-                .findFirst()
-                .ifPresent(WebElement::click);
-    }
-
     public boolean isNavTitleClickable(String title) {
         try {
             return getNavbarTitles().stream()
@@ -142,11 +122,9 @@ public class HomePage extends CommonPage {
 
     public boolean isSubmenuLinkVisible(String linkText) {
         try {
-            // Hover over on the About link and wait for submenu
             actions.moveToElement(aboutLink).perform();
             BrowserUtils.sleep(1);
             
-            // Wait for submenu to be visible
             BrowserUtils.waitForVisibility(aboutSubmenuLinks.getFirst());
             
             return aboutSubmenuLinks.stream()
@@ -172,14 +150,11 @@ public class HomePage extends CommonPage {
 
     public void clickSubmenuLink(String linkText) {
         try {
-            // Hover over on the About link and wait for submenu animation
             actions.moveToElement(aboutLink).perform();
             BrowserUtils.sleep(1);
             
-            // Wait for submenu to be visible and active
             BrowserUtils.waitForVisibility(aboutSubmenuLinks.getFirst());
             
-            // Find and click the specific submenu link
             WebElement targetLink = aboutSubmenuLinks.stream()
                 .filter(element -> {
                     try {
@@ -193,13 +168,11 @@ public class HomePage extends CommonPage {
                 .findFirst()
                 .orElseThrow(() -> new NoSuchElementException("Submenu link not found: " + linkText));
             
-            // Store current URL before clicking
             String urlBefore = driver.getCurrentUrl();
             
             BrowserUtils.waitForElementToBeClickable(targetLink);
             targetLink.click();
             
-            // Wait for page load and URL change
             BrowserUtils.waitForPageToLoad(10);
             BrowserUtils.waitForUrlChange(urlBefore);
             
@@ -212,11 +185,103 @@ public class HomePage extends CommonPage {
     public void hoverOverAboutLink() {
         try {
             actions.moveToElement(aboutLink).perform();
-            BrowserUtils.sleep(1); // Wait for submenu animation
+            BrowserUtils.sleep(1);
             logger.debug("Successfully hovered over About link");
         } catch (Exception e) {
             logger.error("Error hovering over About link: {}", e.getMessage());
             throw e;
+        }
+    }
+
+    public void clickServicesLink() {
+        try {
+            logger.info("Attempting to click Services link");
+            BrowserUtils.waitForElementToBeClickable(servicesLink);
+            actions.moveToElement(servicesLink).perform();
+            BrowserUtils.sleep(1);
+            servicesLink.click();
+            BrowserUtils.waitForPageToLoad(10);
+            logger.info("Successfully clicked Services link");
+        } catch (Exception e) {
+            logger.error("Error clicking Services link: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void clickCareersLink() {
+        try {
+            logger.info("Attempting to click Careers link");
+            BrowserUtils.waitForElementToBeClickable(careersLink);
+            actions.moveToElement(careersLink).perform();
+            BrowserUtils.sleep(1);
+            careersLink.click();
+            BrowserUtils.waitForPageToLoad(10);
+            logger.info("Successfully clicked Careers link");
+        } catch (Exception e) {
+            logger.error("Error clicking Careers link: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void clickContactLink() {
+        try {
+            logger.info("Attempting to click Contact link");
+            BrowserUtils.waitForElementToBeClickable(contactLink);
+            actions.moveToElement(contactLink).perform();
+            BrowserUtils.sleep(1);
+            contactLink.click();
+            BrowserUtils.waitForPageToLoad(10);
+            logger.info("Successfully clicked Contact link");
+        } catch (Exception e) {
+            logger.error("Error clicking Contact link: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void clickNewsEventsLink() {
+        try {
+            logger.info("Attempting to click News & Events link");
+            BrowserUtils.waitForElementToBeClickable(newsEventsLink);
+            actions.moveToElement(newsEventsLink).perform();
+            BrowserUtils.sleep(1);
+            newsEventsLink.click();
+            BrowserUtils.waitForPageToLoad(10);
+            logger.info("Successfully clicked News & Events link");
+        } catch (Exception e) {
+            logger.error("Error clicking News & Events link: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public boolean isNavLinkVisible(WebElement navLink) {
+        try {
+            BrowserUtils.waitForVisibility(navLink);
+            boolean isVisible = navLink.isDisplayed();
+            String linkText = navLink.getText().trim();
+            logger.debug("Nav link '{}' visibility: {}", linkText, isVisible);
+            return isVisible;
+        } catch (Exception e) {
+            logger.error("Error checking nav link visibility: {}", e.getMessage());
+            return false;
+        }
+    }
+
+    public boolean areAllNavLinksVisible() {
+        try {
+            boolean servicesVisible = isNavLinkVisible(servicesLink);
+            boolean careersVisible = isNavLinkVisible(careersLink);
+            boolean contactVisible = isNavLinkVisible(contactLink);
+            boolean newsEventsVisible = isNavLinkVisible(newsEventsLink);
+            boolean aboutVisible = isNavLinkVisible(aboutLink);
+
+            logger.info("Nav links visibility check - Services: {}, Careers: {}, Contact: {}, News & Events: {}, About: {}",
+                servicesVisible, careersVisible, contactVisible, newsEventsVisible, aboutVisible);
+
+            return servicesVisible && careersVisible && contactVisible && 
+                   newsEventsVisible && aboutVisible;
+        } catch (Exception e) {
+            logger.error("Error checking all nav links visibility: {}", e.getMessage());
+            return false;
         }
     }
 } 

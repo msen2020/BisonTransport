@@ -280,3 +280,190 @@
 2025-02-02 17:23:42.501 [main] INFO  c.test.stepDefinitions.HomePageSteps - Starting verification of submenu links visibility and functionality
 2025-02-02 17:23:43.916 [main] INFO  c.test.stepDefinitions.HomePageSteps - Checking submenu link: 'Who We Are' - Visible: true
 2025-02-02 17:23:45.730 [main] INFO  com.test.hooks.Hooks - Keeping browser open for UI inspection
+2025-02-02 19:23:13.327 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 19:23:13.385 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 19:23:15.328 [main] INFO  c.t.w.WebDriverManager - Created new chrome driver instance
+2025-02-02 19:23:15.328 [main] INFO  com.test.hooks.Hooks - Browser initialized using Singleton WebDriverManager
+2025-02-02 19:23:32.098 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 19:23:32.119 [main] INFO  com.test.hooks.Hooks - Keeping browser open for UI inspection
+2025-02-02 19:24:29.107 [main] INFO  BisonTransport - Starting scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 19:24:29.735 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 19:24:29.813 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 19:24:32.094 [main] INFO  c.t.w.WebDriverManager - Created new chrome driver instance
+2025-02-02 19:24:42.153 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 19:24:42.154 [main] INFO  com.test.base.CommonPage - Verifying page title
+2025-02-02 19:24:42.181 [main] INFO  com.test.base.CommonPage - Successfully verified page title
+2025-02-02 19:24:42.182 [main] INFO  com.test.base.CommonPage - Verifying Login Herd and iTools links visibility
+2025-02-02 19:24:52.851 [main] ERROR com.test.utils.BrowserUtils - Error while waiting for element visibility: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: .login-herd-link' (tried for 10 second(s) with 500 milliseconds interval)
+2025-02-02 19:24:53.000 [main] ERROR com.test.base.CommonPage - Error checking Login Herd visibility: no such element: Unable to locate element: {"method":"css selector","selector":".login-herd-link"}
+  (Session info: chrome=132.0.6834.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [731567eca964e845c28fd4ccab2a404e, findElement {using=css selector, value=.login-herd-link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62481}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62481/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 731567eca964e845c28fd4ccab2a404e
+2025-02-02 19:24:53.026 [main] ERROR BisonTransport - Scenario failed: TC_01 user goes to BisonTransport Page
+2025-02-02 19:24:53.026 [main] INFO  BisonTransport - Finished scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 19:24:53.395 [main] INFO  c.t.w.WebDriverManager - WebDriver instance has been destroyed
+2025-02-02 19:26:03.770 [main] INFO  BisonTransport - Starting scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 19:26:04.265 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 19:26:04.318 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 19:26:06.359 [main] INFO  c.t.w.WebDriverManager - Created new chrome driver instance
+2025-02-02 19:26:44.807 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 19:26:44.809 [main] INFO  com.test.base.CommonPage - Verifying page title
+2025-02-02 19:26:44.862 [main] INFO  com.test.base.CommonPage - Successfully verified page title
+2025-02-02 19:26:44.863 [main] INFO  com.test.base.CommonPage - Verifying Login Herd and iTools links visibility
+2025-02-02 19:26:54.958 [main] ERROR com.test.utils.BrowserUtils - Error while waiting for element visibility: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: .login-herd-link' (tried for 10 second(s) with 500 milliseconds interval)
+2025-02-02 19:26:54.973 [main] ERROR com.test.base.CommonPage - Error checking Login Herd visibility: no such element: Unable to locate element: {"method":"css selector","selector":".login-herd-link"}
+  (Session info: chrome=132.0.6834.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5ba7a7228897b557295282e95d9fb4c, findElement {using=css selector, value=.login-herd-link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62579}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62579/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5ba7a7228897b557295282e95d9fb4c
+2025-02-02 19:26:54.984 [main] ERROR BisonTransport - Scenario failed: TC_01 user goes to BisonTransport Page
+2025-02-02 19:26:54.985 [main] INFO  BisonTransport - Finished scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 19:26:55.244 [main] INFO  c.t.w.WebDriverManager - WebDriver instance has been destroyed
+2025-02-02 19:30:44.181 [main] INFO  BisonTransport - Starting scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 19:30:44.723 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 19:30:44.778 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 19:30:46.764 [main] INFO  c.t.w.WebDriverManager - Created new chrome driver instance
+2025-02-02 19:31:09.989 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 19:31:09.992 [main] INFO  com.test.base.CommonPage - Verifying page title
+2025-02-02 19:31:10.020 [main] INFO  com.test.base.CommonPage - Successfully verified page title
+2025-02-02 19:31:10.021 [main] INFO  com.test.base.CommonPage - Verifying Login Herd and iTools links visibility
+2025-02-02 19:31:20.308 [main] ERROR com.test.utils.BrowserUtils - Error while waiting for element visibility: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: .login-herd-link' (tried for 10 second(s) with 500 milliseconds interval)
+2025-02-02 19:31:20.343 [main] ERROR com.test.base.CommonPage - Error checking Login Herd visibility: no such element: Unable to locate element: {"method":"css selector","selector":".login-herd-link"}
+  (Session info: chrome=132.0.6834.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6a7f93471f538cac832d299dbcf4f665, findElement {using=css selector, value=.login-herd-link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62899}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62899/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6a7f93471f538cac832d299dbcf4f665
+2025-02-02 19:31:20.360 [main] ERROR BisonTransport - Scenario failed: TC_01 user goes to BisonTransport Page
+2025-02-02 19:31:20.360 [main] INFO  BisonTransport - Finished scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 19:31:20.669 [main] INFO  c.t.w.WebDriverManager - WebDriver instance has been destroyed
+2025-02-02 19:35:54.082 [main] INFO  BisonTransport - Starting scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 19:35:54.594 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 19:35:54.649 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 19:35:56.516 [main] INFO  c.t.w.WebDriverManager - Created new chrome driver instance
+2025-02-02 19:36:31.658 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 19:36:31.659 [main] INFO  com.test.base.CommonPage - Verifying page title
+2025-02-02 19:36:31.697 [main] INFO  com.test.base.CommonPage - Successfully verified page title
+2025-02-02 19:36:31.698 [main] INFO  com.test.base.CommonPage - Verifying Login Herd and iTools links visibility
+2025-02-02 19:36:42.201 [main] ERROR com.test.utils.BrowserUtils - Error while waiting for element visibility: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: .login-herd-link' (tried for 10 second(s) with 500 milliseconds interval)
+2025-02-02 19:36:42.256 [main] ERROR com.test.base.CommonPage - Error checking Login Herd visibility: no such element: Unable to locate element: {"method":"css selector","selector":".login-herd-link"}
+  (Session info: chrome=132.0.6834.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3db5011ede1ac69dc74c7cc3e4d2e60d, findElement {using=css selector, value=.login-herd-link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63208}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63208/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3db5011ede1ac69dc74c7cc3e4d2e60d
+2025-02-02 19:36:42.272 [main] ERROR BisonTransport - Scenario failed: TC_01 user goes to BisonTransport Page
+2025-02-02 19:36:42.272 [main] INFO  BisonTransport - Finished scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 19:36:42.586 [main] INFO  c.t.w.WebDriverManager - WebDriver instance has been destroyed
+2025-02-02 19:37:46.794 [main] INFO  BisonTransport - Starting scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 19:37:47.200 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 19:37:47.236 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 19:37:48.822 [main] INFO  c.t.w.WebDriverManager - Created new chrome driver instance
+2025-02-02 19:38:31.824 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 19:38:31.827 [main] INFO  com.test.base.CommonPage - Verifying page title
+2025-02-02 19:38:32.017 [main] INFO  com.test.base.CommonPage - Successfully verified page title
+2025-02-02 19:38:32.021 [main] INFO  com.test.base.CommonPage - Verifying Login Herd and iTools links visibility
+2025-02-02 19:38:32.354 [main] INFO  com.test.base.CommonPage - Clicking on Login Herd link
+2025-02-02 19:38:32.354 [main] INFO  com.test.base.CommonPage - Attempting to click Login Herd link
+2025-02-02 19:38:32.704 [main] INFO  com.test.base.CommonPage - Successfully clicked Login Herd link
+2025-02-02 19:38:32.706 [main] INFO  com.test.base.CommonPage - Verifying navigation to Herd login page
+2025-02-02 19:38:32.774 [main] ERROR BisonTransport - Scenario failed: TC_01 user goes to BisonTransport Page
+2025-02-02 19:38:32.774 [main] INFO  BisonTransport - Finished scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 19:38:33.145 [main] INFO  c.t.w.WebDriverManager - WebDriver instance has been destroyed
+2025-02-02 22:33:50.189 [main] INFO  BisonTransport - Starting scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 22:33:50.196 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-02 22:33:51.511 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 22:33:51.555 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 22:34:31.256 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 22:34:31.258 [main] INFO  com.test.base.CommonPage - Verifying page title
+2025-02-02 22:34:31.292 [main] INFO  com.test.base.CommonPage - Successfully verified page title
+2025-02-02 22:34:31.292 [main] INFO  com.test.base.CommonPage - Verifying Login Herd and iTools links visibility
+2025-02-02 22:34:31.565 [main] INFO  com.test.base.CommonPage - Clicking on Login Herd link
+2025-02-02 22:34:31.566 [main] INFO  com.test.base.CommonPage - Attempting to click Login Herd link
+2025-02-02 22:34:32.068 [main] INFO  com.test.base.CommonPage - Successfully clicked Login Herd link
+2025-02-02 22:34:32.070 [main] INFO  com.test.base.CommonPage - Verifying navigation to Herd login page
+2025-02-02 22:34:32.118 [main] ERROR BisonTransport - Scenario failed: TC_01 user goes to BisonTransport Page
+2025-02-02 22:34:32.119 [main] INFO  BisonTransport - Finished scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 22:37:44.000 [main] INFO  BisonTransport - Starting scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 22:37:44.007 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-02 22:37:44.561 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 22:37:44.611 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 22:38:10.985 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 22:38:10.986 [main] INFO  com.test.base.CommonPage - Verifying page title
+2025-02-02 22:38:11.020 [main] INFO  com.test.base.CommonPage - Successfully verified page title
+2025-02-02 22:38:11.023 [main] INFO  com.test.base.CommonPage - Verifying Login Herd and iTools links visibility
+2025-02-02 22:38:11.321 [main] INFO  com.test.base.CommonPage - Clicking on Login Herd link
+2025-02-02 22:38:11.321 [main] INFO  com.test.base.CommonPage - Attempting to click Login Herd link
+2025-02-02 22:38:11.949 [main] INFO  com.test.base.CommonPage - Successfully clicked Login Herd link
+2025-02-02 22:38:11.950 [main] INFO  com.test.base.CommonPage - Verifying navigation to Herd login page
+2025-02-02 22:38:11.993 [main] ERROR BisonTransport - Scenario failed: TC_01 user goes to BisonTransport Page
+2025-02-02 22:38:11.994 [main] INFO  BisonTransport - Finished scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 22:45:42.972 [main] INFO  BisonTransport - Starting scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 22:45:42.986 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-02 22:45:43.411 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 22:45:43.450 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 22:46:18.596 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 22:46:18.601 [main] INFO  com.test.base.CommonPage - Verifying page title
+2025-02-02 22:46:18.703 [main] INFO  com.test.base.CommonPage - Successfully verified page title
+2025-02-02 22:46:18.704 [main] INFO  com.test.base.CommonPage - Verifying Login Herd and iTools links visibility
+2025-02-02 22:46:18.984 [main] INFO  com.test.base.CommonPage - Clicking on Login Herd link
+2025-02-02 22:46:18.984 [main] INFO  com.test.base.CommonPage - Attempting to click Login Herd link
+2025-02-02 22:46:22.328 [main] INFO  com.test.base.CommonPage - Successfully clicked Login Herd link and switched to new window
+2025-02-02 22:46:22.330 [main] INFO  com.test.base.CommonPage - Verifying navigation to Herd login page
+2025-02-02 22:46:22.370 [main] ERROR BisonTransport - Scenario failed: TC_01 user goes to BisonTransport Page
+2025-02-02 22:46:22.370 [main] INFO  BisonTransport - Finished scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 23:11:18.427 [main] INFO  BisonTransport - Starting scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 23:11:18.439 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-02 23:11:19.264 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 23:11:19.358 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 23:11:54.388 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 23:11:54.390 [main] INFO  com.test.base.CommonPage - Verifying page title
+2025-02-02 23:11:54.524 [main] INFO  com.test.base.CommonPage - Successfully verified page title
+2025-02-02 23:11:54.526 [main] INFO  com.test.base.CommonPage - Verifying Login Herd and iTools links visibility
+2025-02-02 23:11:55.084 [main] INFO  com.test.base.CommonPage - Clicking on Login Herd link
+2025-02-02 23:11:55.084 [main] INFO  com.test.base.CommonPage - Attempting to click Login Herd link
+2025-02-02 23:11:55.993 [main] INFO  com.test.base.CommonPage - Successfully clicked Login Herd link
+2025-02-02 23:11:56.001 [main] INFO  com.test.base.CommonPage - Verifying navigation to Herd login page
+2025-02-02 23:12:00.092 [main] INFO  com.test.base.CommonPage - Navigating back to home page
+2025-02-02 23:12:00.204 [main] INFO  com.test.base.CommonPage - Clicking on Login iTools link
+2025-02-02 23:12:00.204 [main] INFO  com.test.base.CommonPage - Attempting to click Login iTools link
+2025-02-02 23:12:01.039 [main] INFO  com.test.base.CommonPage - Successfully clicked Login iTools link
+2025-02-02 23:12:01.040 [main] INFO  com.test.base.CommonPage - Verifying navigation to iTools login page
+2025-02-02 23:12:01.315 [main] ERROR BisonTransport - Scenario failed: TC_01 user goes to BisonTransport Page
+2025-02-02 23:12:01.315 [main] INFO  BisonTransport - Finished scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 23:22:39.286 [main] INFO  BisonTransport - Starting scenario: TC_01 user goes to BisonTransport Page
+2025-02-02 23:22:39.295 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-02 23:22:40.112 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-02 23:22:40.191 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-02 23:23:14.477 [main] INFO  com.test.base.CommonPage - Navigated to Bison Transport website
+2025-02-02 23:23:14.480 [main] INFO  com.test.base.CommonPage - Verifying page title
+2025-02-02 23:23:14.515 [main] INFO  com.test.base.CommonPage - Successfully verified page title
+2025-02-02 23:23:14.516 [main] INFO  com.test.base.CommonPage - Verifying Login Herd and iTools links visibility
+2025-02-02 23:23:14.958 [main] INFO  com.test.base.CommonPage - Clicking on Login Herd link
+2025-02-02 23:23:14.958 [main] INFO  com.test.base.CommonPage - Attempting to click Login Herd link
+2025-02-02 23:23:15.590 [main] INFO  com.test.base.CommonPage - Successfully clicked Login Herd link
+2025-02-02 23:23:15.592 [main] INFO  com.test.base.CommonPage - Switching to new tab
+2025-02-02 23:23:19.748 [main] INFO  com.test.base.CommonPage - Verifying Herd login page title
+2025-02-02 23:23:19.777 [main] INFO  com.test.base.CommonPage - Closing current tab
+2025-02-02 23:23:20.131 [main] INFO  com.test.base.CommonPage - Clicking on Login iTools link
+2025-02-02 23:23:20.132 [main] INFO  com.test.base.CommonPage - Attempting to click Login iTools link
+2025-02-02 23:23:20.811 [main] INFO  com.test.base.CommonPage - Successfully clicked Login iTools link
+2025-02-02 23:23:20.812 [main] INFO  com.test.base.CommonPage - Switching to new tab
+2025-02-02 23:23:29.484 [main] INFO  com.test.base.CommonPage - Verifying iTools login page
+2025-02-02 23:23:29.554 [main] INFO  com.test.base.CommonPage - Closing current tab
+2025-02-02 23:23:29.874 [main] INFO  BisonTransport - Finished scenario: TC_01 user goes to BisonTransport Page
