@@ -15,6 +15,22 @@ Create a Runner file that will be used to run the tests.
 Create an enum file that will be used to write the enum values.
 Create the necessary dependencies and plugins in the pom.xml file.
 Use the web address https://www.saucedemo.com/ for the tests.
+
+## Dependencies
+
+The project uses the following key dependencies with security patches:
+
+- Selenium WebDriver: 4.14.1 (CVE-2023-5590 fix)
+- Jackson Databind: 2.13.4.2 (Multiple CVE fixes)
+- Netty: 4.1.115.Final (CVE-2024-47535 fix)
+- AsyncHttpClient: 3.0.1 (CVE-2024-53990 fix)
+- Guava: 32.0.1-jre (CVE-2023-2976 fix)
+- Bouncy Castle: 1.78 (Multiple CVE fixes)
+- Commons IO: 2.14.0 (CVE-2024-47554 fix)
+- Commons Compress: 1.26.0 (CVE-2024-25710, CVE-2024-26308 fixes)
+
+All dependencies are explicitly declared to override potentially vulnerable transitive versions.
+
 @Codebase
 
 src/

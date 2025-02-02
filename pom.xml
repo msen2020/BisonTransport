@@ -12,8 +12,15 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <selenium.version>4.10.0</selenium.version>
+        <selenium.version>4.14.1</selenium.version>
         <cucumber.version>7.15.0</cucumber.version>
+        <jackson.version>2.13.4.2</jackson.version>
+        <netty.version>4.1.115.Final</netty.version>
+        <async.http.client.version>3.0.1</async.http.client.version>
+        <guava.version>32.0.1-jre</guava.version>
+        <bouncycastle.version>1.78</bouncycastle.version>
+        <commons.io.version>2.14.0</commons.io.version>
+        <commons.compress.version>1.26.0</commons.compress.version>
     </properties>
 
     <dependencies>
@@ -66,6 +73,55 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.4.12</version>
+        </dependency>
+
+        <!-- Jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <!-- Netty (to override transitive dependency) -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-codec-http</artifactId>
+            <version>${netty.version}</version>
+        </dependency>
+
+        <!-- AsyncHttpClient (to override transitive dependency) -->
+        <dependency>
+            <groupId>org.asynchttpclient</groupId>
+            <artifactId>async-http-client</artifactId>
+            <version>${async.http.client.version}</version>
+        </dependency>
+
+        <!-- Guava (to override transitive dependency) -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+        <!-- Bouncy Castle (to override transitive dependency) -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk18on</artifactId>
+            <version>${bouncycastle.version}</version>
+        </dependency>
+
+        <!-- Apache Commons IO (to override transitive dependency) -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons.io.version}</version>
+        </dependency>
+
+        <!-- Apache Commons Compress (to override transitive dependency) -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>${commons.compress.version}</version>
         </dependency>
     </dependencies>
 

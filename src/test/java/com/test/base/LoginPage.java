@@ -3,7 +3,6 @@ package com.test.base;
 import com.test.utils.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import static com.test.hooks.Hooks.logger;
 
 public class LoginPage extends CommonPage {
 

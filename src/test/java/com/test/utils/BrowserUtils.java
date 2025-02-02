@@ -87,15 +87,6 @@ public class BrowserUtils {
         }
     }
 
-    public static String getTitle() {
-        try {
-            return getDriver().getTitle();
-        } catch (Exception e) {
-            logger.error("Error getting page title: {}", e.getMessage());
-            return "";
-        }
-    }
-
     /**
      * Waits for the page title to contain the specified text
      * @param titleText text to wait for in the page title
