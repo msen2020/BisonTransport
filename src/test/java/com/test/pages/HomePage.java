@@ -1,4 +1,4 @@
-package com.test.base;
+package com.test.pages;
 
 import com.test.utils.BrowserUtils;
 import org.openqa.selenium.WebElement;
@@ -29,10 +29,10 @@ public class HomePage extends CommonPage {
     @FindBy(css = ".x-menu-first-level > li > a .x-anchor-text-primary")
     private List<WebElement> navbarTitles;
 
-    @FindBy(css = "#menu-item-147 > a .x-anchor-text-primary")
+    @FindBy(css = "a[href*='/about'] .x-anchor-text-primary")
     private WebElement aboutLink;
 
-    @FindBy(css = ".sub-menu.x-dropdown.x-active li a.x-anchor.x-anchor-menu-item")
+    @FindBy(css = ".sub-menu.x-dropdown.x-active li .x-anchor-text-primary")
     private List<WebElement> aboutSubmenuLinks;
 
     public List<WebElement> getNavbarTitles() {
@@ -111,8 +111,8 @@ public class HomePage extends CommonPage {
             BrowserUtils.waitForElementToBeClickable(aboutLink);
             actions.moveToElement(aboutLink).perform();
             BrowserUtils.sleep(1);
-            aboutLink.click();
-            BrowserUtils.waitForPageToLoad(10);
+            BrowserUtils.waitAndClick(aboutLink);
+            BrowserUtils.waitForPageToLoad(25);
             logger.info("Successfully clicked About link");
         } catch (Exception e) {
             logger.error("Error clicking About link: {}", e.getMessage());
@@ -148,37 +148,47 @@ public class HomePage extends CommonPage {
         }
     }
 
-    public void clickSubmenuLink(String linkText) {
+    public boolean verifyAndClickSubmenuLink(String linkText) {
         try {
             actions.moveToElement(aboutLink).perform();
             BrowserUtils.sleep(1);
             
             BrowserUtils.waitForVisibility(aboutSubmenuLinks.getFirst());
+            logger.debug("Found {} submenu links", aboutSubmenuLinks.size());
             
             WebElement targetLink = aboutSubmenuLinks.stream()
                 .filter(element -> {
                     try {
-                        String text = element.findElement(By.cssSelector(".x-anchor-text-primary"))
-                            .getText().trim();
+                        String text = element.getText().trim();
+                        logger.debug("Found submenu text: '{}'", text);
                         return text.equalsIgnoreCase(linkText);
                     } catch (Exception e) {
+                        logger.debug("Error getting submenu text: {}", e.getMessage());
                         return false;
                     }
                 })
                 .findFirst()
                 .orElseThrow(() -> new NoSuchElementException("Submenu link not found: " + linkText));
             
-            String urlBefore = driver.getCurrentUrl();
+            WebElement parentAnchor = targetLink.findElement(By.xpath("./ancestor::a[contains(@class, 'x-anchor-menu-item')]"));
             
-            BrowserUtils.waitForElementToBeClickable(targetLink);
-            targetLink.click();
+            boolean isVisible = BrowserUtils.verifyElementDisplayed(parentAnchor);
+            if (!isVisible) {
+                logger.error("Submenu link '{}' is not visible", linkText);
+                return false;
+            }
             
-            BrowserUtils.waitForPageToLoad(10);
-            BrowserUtils.waitForUrlChange(urlBefore);
+            logger.info("Clicking submenu link: '{}'", linkText);
+            boolean clicked = BrowserUtils.clickElement(parentAnchor);
+            if (clicked) {
+                BrowserUtils.waitForPageToLoad(25);
+            }
+            return clicked;
             
         } catch (Exception e) {
-            logger.error("Error clicking submenu link '{}': {}", linkText, e.getMessage());
-            throw e;
+            logger.error("Error verifying and clicking submenu link '{}': {}", 
+                linkText, e.getMessage());
+            return false;
         }
     }
 

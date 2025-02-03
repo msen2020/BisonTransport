@@ -1,4 +1,4 @@
-package com.test.base;
+package com.test.pages;
 
 import com.test.driver.DriverManager;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import static com.test.hooks.Hooks.logger;
 
 import java.util.List;
 

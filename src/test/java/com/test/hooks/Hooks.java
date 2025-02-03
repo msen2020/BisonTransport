@@ -1,6 +1,6 @@
 package com.test.hooks;
 
-import com.test.base.HomePage;
+import com.test.pages.HomePage;
 import com.test.driver.DriverManager;
 
 import io.cucumber.java.After;

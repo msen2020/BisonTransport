@@ -1,13 +1,13 @@
-package com.test.stepDefinitions;
+package com.test.stepDefinitions.login;
 
-import com.test.base.CommonPage;
+import com.test.pages.CommonPage;
 import com.test.utils.BrowserUtils;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 
 import static com.test.utils.BrowserUtils.getDriver;
 
-public class LoginSteps extends CommonPage {
+public class LOG_01 extends CommonPage {
 
     @Given("user goes to Bison Transport page")
     public void user_goes_to_bison_transport_page() {

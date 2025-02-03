@@ -1,4 +1,4 @@
-package com.test.base;
+package com.test.pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;

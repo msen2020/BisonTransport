@@ -192,7 +192,7 @@ public class BrowserUtils {
      * 
      * @param expectedTitle the expected title or text within title
      * @param exactMatch whether to check for exact match or partial match
-     * @return true if title matches according to the specified criteria
+     * @return true if title matches, according to the specified criteria
      */
     public static boolean verifyPageTitle(String expectedTitle, boolean exactMatch) {
         try {
@@ -242,6 +242,42 @@ public class BrowserUtils {
         } catch (Exception e) {
             logger.error("Error switching to main window: {}", e.getMessage());
             throw e;
+        }
+    }
+
+    /**
+     * Waits for an element to be visible and verifies it's displayed
+     * 
+     * @param element the element to check
+     * @return true if an element is visible and displayed
+     */
+    public static boolean verifyElementDisplayed(WebElement element) {
+        try {
+            waitForVisibility(element);
+            boolean isDisplayed = element.isDisplayed();
+            logger.debug("Element display status: {}", isDisplayed);
+            return isDisplayed;
+        } catch (Exception e) {
+            logger.error("Error verifying element display: {}", e.getMessage());
+            return false;
+        }
+    }
+
+    /**
+     * Waits for element to be clickable and clicks it
+     * 
+     * @param element the element to click
+     * @return true if click was successful
+     */
+    public static boolean clickElement(WebElement element) {
+        try {
+            waitForElementToBeClickable(element);
+            element.click();
+            logger.debug("Successfully clicked element");
+            return true;
+        } catch (Exception e) {
+            logger.error("Error clicking element: {}", e.getMessage());
+            return false;
         }
     }
 } 

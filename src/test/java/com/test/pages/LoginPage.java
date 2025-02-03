@@ -1,4 +1,4 @@
-package com.test.base;
+package com.test.pages;
 
 import com.test.utils.BrowserUtils;
 import org.openqa.selenium.WebElement;
