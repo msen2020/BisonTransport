@@ -14,12 +14,6 @@ public class HomePage extends CommonPage {
     @FindBy(linkText = "Services")
     protected WebElement servicesLink;
 
-    @FindBy(linkText = "About Us")
-    protected WebElement aboutUsLink;
-
-    @FindBy(linkText = "Careers")
-    protected WebElement careersLink;
-
     @FindBy(linkText = "Contact")
     protected WebElement contactLink;
 
@@ -34,6 +28,12 @@ public class HomePage extends CommonPage {
 
     @FindBy(css = ".sub-menu.x-dropdown.x-active li .x-anchor-text-primary")
     private List<WebElement> aboutSubmenuLinks;
+
+    @FindBy(css = "a[href*='/careers'] .x-anchor-text-primary")
+    private WebElement careersLink;
+
+    @FindBy(css = "a[href*='/shippers'] .x-anchor-text-primary")
+    private WebElement shippersLink;
 
     public List<WebElement> getNavbarTitles() {
         return navbarTitles;
@@ -292,6 +292,28 @@ public class HomePage extends CommonPage {
         } catch (Exception e) {
             logger.error("Error checking all nav links visibility: {}", e.getMessage());
             return false;
+        }
+    }
+
+    public void hoverOverCareersLink() {
+        try {
+            actions.moveToElement(careersLink).perform();
+            BrowserUtils.sleep(1);
+            logger.debug("Successfully hovered over Careers link");
+        } catch (Exception e) {
+            logger.error("Error hovering over Careers link: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void hoverOverShippersLink() {
+        try {
+            actions.moveToElement(shippersLink).perform();
+            BrowserUtils.sleep(1);
+            logger.debug("Successfully hovered over Shippers link");
+        } catch (Exception e) {
+            logger.error("Error hovering over Shippers link: {}", e.getMessage());
+            throw e;
         }
     }
 } 

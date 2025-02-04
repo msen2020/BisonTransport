@@ -8,9 +8,11 @@ import com.test.utils.BrowserUtils;
 import com.test.pages.CommonPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.JavascriptExecutor;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import static com.test.utils.BrowserUtils.getDriver;
 
@@ -187,7 +189,7 @@ public class HP_01 extends CommonPage {
             String expectedHeading = row.get("heading");
             
             try {
-                // Hover over About link
+                // Hover over the About link
                 logger.info("Verifying menu item: '{}'", menuItem);
                 homePage().hoverOverAboutLink();
                 
@@ -236,5 +238,199 @@ public class HP_01 extends CommonPage {
         }
         
         logger.info("Successfully verified all About menu items and their content");
+    }
+
+    @Then("verify Careers menu items and their content")
+    public void verifyCareersMenuItemsAndTheirContent(DataTable dataTable) {
+        List<Map<String, String>> data = dataTable.asMaps();
+        
+        logger.info("Starting verification of Careers menu items and their content");
+        
+        for (Map<String, String> row : data) {
+            String menuItem = row.get("menuItem");
+            String expectedUrl = row.get("url");
+            String expectedTitle = row.get("pageTitle");
+            String expectedHeading = row.get("heading");
+            
+            try {
+                // Hover over Careers link
+                logger.info("Verifying menu item: '{}'", menuItem);
+                homePage().hoverOverCareersLink();
+                
+                // Store the current window handle
+                String mainWindow = getDriver().getWindowHandle();
+                
+                // Click menu item
+                WebElement element = getDriver().findElement(
+                    By.xpath("//span[contains(@class, 'x-anchor-text-primary') and text()='" + menuItem + "']")
+                );
+                BrowserUtils.waitAndClick(element);
+                logger.info("Clicked menu item: '{}'", menuItem);
+                
+                // Switch to new tab
+                BrowserUtils.sleep(2);
+                Set<String> windowHandles = getDriver().getWindowHandles();
+                String newWindow = windowHandles.stream()
+                    .filter(handle -> !handle.equals(mainWindow))
+                    .findFirst()
+                    .orElseThrow(() -> new RuntimeException("New window was not opened"));
+                getDriver().switchTo().window(newWindow);
+                
+                // Verify URL
+                BrowserUtils.sleep(2);
+                BrowserUtils.waitForPageToLoad(25);
+                String currentUrl = getDriver().getCurrentUrl();
+                Assert.assertEquals(
+                    String.format("URL should be '%s', but was '%s'", 
+                        expectedUrl, currentUrl),
+                    expectedUrl,
+                    currentUrl
+                );
+                
+                // Verify page title
+                String actualTitle = getDriver().getTitle();
+                Assert.assertTrue(
+                    String.format("Page title should contain '%s', but was '%s'", 
+                        expectedTitle, actualTitle),
+                    actualTitle.contains(expectedTitle)
+                );
+                
+                // Verify heading
+                WebElement heading = getDriver().findElement(By.cssSelector("h1"));
+                BrowserUtils.waitForVisibility(heading);
+                String actualHeading = heading.getText().trim();
+                Assert.assertTrue(
+                    String.format("Page heading should contain '%s', but was '%s'", 
+                        expectedHeading, actualHeading),
+                    actualHeading.contains(expectedHeading)
+                );
+                
+                logger.info("Successfully verified menu item '{}' - URL: {}, Title: {}, Heading: {}", 
+                    menuItem, expectedUrl, expectedTitle, expectedHeading);
+                
+                // Close the new tab and switch back to the main window
+                getDriver().close();
+                getDriver().switchTo().window(mainWindow);
+                
+            } catch (Exception e) {
+                logger.error("Error verifying menu item '{}': {}", menuItem, e.getMessage());
+                throw e;
+            }
+        }
+        
+        logger.info("Successfully verified all Careers menu items and their content");
+    }
+
+    @Then("verify Shippers menu items and their content")
+    public void verifyShippersMenuItemsAndTheirContent(DataTable dataTable) {
+        List<Map<String, String>> data = dataTable.asMaps();
+        
+        logger.info("Starting verification of Shippers menu items and their content");
+        
+        for (Map<String, String> row : data) {
+            String menuItem = row.get("menuItem");
+            String expectedUrl = row.get("url");
+            String expectedTitle = row.get("pageTitle");
+            String expectedHeading = row.get("heading");
+            
+            try {
+                // Hover over Shippers link and wait for submenu
+                logger.info("Verifying menu item: '{}'", menuItem);
+                homePage().hoverOverShippersLink();
+                BrowserUtils.sleep(3); // Increased wait for submenu animation
+                
+                // Store the current window handle
+                String mainWindow = getDriver().getWindowHandle();
+                
+                // Click menu item with retry logic
+                int maxRetries = 3;
+                int retryCount = 0;
+                boolean clicked = false;
+                
+                while (!clicked && retryCount < maxRetries) {
+                    try {
+                        WebElement element = getDriver().findElement(
+                            By.xpath("//span[contains(@class, 'x-anchor-text-primary') and text()='" + menuItem + "']")
+                        );
+                        if (!element.isDisplayed()) {
+                            homePage().hoverOverShippersLink(); // Hover again if element not visible
+                            BrowserUtils.sleep(2); // Increased wait after hover
+                        }
+                        BrowserUtils.waitAndClick(element);
+                        clicked = true;
+                        logger.info("Clicked menu item: '{}'", menuItem);
+                    } catch (Exception e) {
+                        retryCount++;
+                        if (retryCount == maxRetries) {
+                            throw e;
+                        }
+                        BrowserUtils.sleep(2); // Increased wait between retries
+                    }
+                }
+                
+                // Switch to new tab with increased wait
+                BrowserUtils.sleep(5); // Increased wait for new tab
+                Set<String> windowHandles = getDriver().getWindowHandles();
+                String newWindow = windowHandles.stream()
+                    .filter(handle -> !handle.equals(mainWindow))
+                    .findFirst()
+                    .orElseThrow(() -> new RuntimeException("New window was not opened"));
+                getDriver().switchTo().window(newWindow);
+                
+                // Wait for page load with increased timeout
+                BrowserUtils.waitForPageToLoad(45); // Increased page load timeout
+                
+                // Additional wait for JavaScript completion
+                ((JavascriptExecutor) getDriver()).executeScript("return document.readyState").equals("complete");
+                
+                // Verify URL with retry
+                BrowserUtils.sleep(3);
+                String currentUrl = getDriver().getCurrentUrl();
+                int urlRetries = 0;
+                while (!currentUrl.equals(expectedUrl) && urlRetries < 3) {
+                    BrowserUtils.sleep(2);
+                    currentUrl = getDriver().getCurrentUrl();
+                    urlRetries++;
+                }
+                Assert.assertEquals(
+                    String.format("URL should be '%s', but was '%s'", 
+                        expectedUrl, currentUrl),
+                    expectedUrl,
+                    currentUrl
+                );
+                
+                // Verify page title
+                String actualTitle = getDriver().getTitle();
+                Assert.assertTrue(
+                    String.format("Page title should contain '%s', but was '%s'", 
+                        expectedTitle, actualTitle),
+                    actualTitle.contains(expectedTitle)
+                );
+                
+                // Verify heading
+                WebElement heading = getDriver().findElement(By.cssSelector("h1.x-text-content-text-primary"));
+                BrowserUtils.waitForVisibility(heading);
+                String actualHeading = heading.getText().trim();
+                Assert.assertTrue(
+                    String.format("Page heading should contain '%s', but was '%s'", 
+                        expectedHeading, actualHeading),
+                    actualHeading.equalsIgnoreCase(expectedHeading)
+                );
+                
+                logger.info("Successfully verified menu item '{}' - URL: {}, Title: {}, Heading: {}", 
+                    menuItem, expectedUrl, expectedTitle, expectedHeading);
+                
+                // Close new tab and switch back with increased wait
+                getDriver().close();
+                getDriver().switchTo().window(mainWindow);
+                BrowserUtils.sleep(3); // Increased wait after switching back
+                
+            } catch (Exception e) {
+                logger.error("Error verifying menu item '{}': {}", menuItem, e.getMessage());
+                throw e;
+            }
+        }
+        
+        logger.info("Successfully verified all Shippers menu items and their content");
     }
 } 

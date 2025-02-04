@@ -1047,3 +1047,390 @@ Session ID: b8b750afc11aaf96f24d688c68e15967
 2025-02-04 01:10:37.708 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Blog' - URL: blog, Title: Blog - Bison Transport, Heading: BISON BLOG
 2025-02-04 01:10:37.709 [main] INFO  com.test.pages.CommonPage - Successfully verified all About menu items and their content
 2025-02-04 01:10:37.711 [main] INFO  BisonTransport - Finished scenario: TC_02 Verify About menu items and page content
+2025-02-04 13:09:11.302 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_01 Verify navbar titles are visible and functional
+2025-02-04 13:09:11.315 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 13:09:13.093 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 13:09:13.172 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 13:09:18.849 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 13:09:18.854 [main] INFO  com.test.pages.CommonPage - Starting verification of navbar titles visibility and functionality
+2025-02-04 13:09:20.911 [main] INFO  com.test.pages.CommonPage - Starting URL: https://www.bisontransport.com/
+2025-02-04 13:09:22.531 [main] INFO  com.test.pages.CommonPage - Checking navbar title: 'About' - Visible: true, Actual text: 'About'
+2025-02-04 13:09:24.058 [main] INFO  com.test.pages.CommonPage - Successfully verified navbar title functionality: About - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/about
+2025-02-04 13:09:26.794 [main] INFO  com.test.pages.CommonPage - Checking navbar title: 'Careers' - Visible: true, Actual text: 'Careers'
+2025-02-04 13:09:29.550 [main] INFO  com.test.pages.CommonPage - Successfully verified navbar title functionality: Careers - URL changed from https://www.bisontransport.com/ to https://careers.bisontransport.com/ca/en
+2025-02-04 13:09:31.343 [main] INFO  com.test.pages.CommonPage - Checking navbar title: 'Shippers' - Visible: true, Actual text: 'Shippers'
+2025-02-04 13:09:32.868 [main] INFO  com.test.pages.CommonPage - Successfully verified navbar title functionality: Shippers - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/shippers
+2025-02-04 13:09:34.694 [main] INFO  com.test.pages.CommonPage - Checking navbar title: 'Carriers' - Visible: true, Actual text: 'Carriers'
+2025-02-04 13:09:36.597 [main] INFO  com.test.pages.CommonPage - Successfully verified navbar title functionality: Carriers - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/carriers
+2025-02-04 13:09:38.782 [main] INFO  com.test.pages.CommonPage - Checking navbar title: 'Locations' - Visible: true, Actual text: 'Locations'
+2025-02-04 13:09:40.285 [main] INFO  com.test.pages.CommonPage - Successfully verified navbar title functionality: Locations - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/location
+2025-02-04 13:09:42.166 [main] INFO  com.test.pages.CommonPage - Checking navbar title: 'Contact' - Visible: true, Actual text: 'Contact'
+2025-02-04 13:09:43.915 [main] INFO  com.test.pages.CommonPage - Successfully verified navbar title functionality: Contact - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/contact
+2025-02-04 13:09:51.212 [main] INFO  com.test.pages.CommonPage - Checking navbar title: 'Talk to an Expert' - Visible: true, Actual text: 'Talk to an Expert'
+2025-02-04 13:09:53.838 [main] INFO  com.test.pages.CommonPage - Successfully verified navbar title functionality: Talk to an Expert - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/talk-to-an-expert
+2025-02-04 13:09:56.085 [main] INFO  com.test.pages.CommonPage - Checking navbar title: 'Request Quote' - Visible: true, Actual text: 'Request Quote'
+2025-02-04 13:09:57.975 [main] INFO  com.test.pages.CommonPage - Successfully verified navbar title functionality: Request Quote - URL changed from https://www.bisontransport.com/ to https://www.bisontransport.com/request-quote
+2025-02-04 13:09:58.016 [main] INFO  com.test.pages.CommonPage - All navbar titles verified successfully for visibility and functionality
+2025-02-04 13:09:58.016 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_01 Verify navbar titles are visible and functional
+2025-02-04 13:34:05.187 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 13:34:05.187 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 13:34:05.581 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 13:34:05.628 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 13:37:07.876 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 13:37:07.877 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:03:38.219 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:03:38.226 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:03:38.720 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:03:38.777 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:05:41.236 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:05:41.252 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:12:10.714 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:12:10.726 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:12:12.051 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:12:12.096 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:14:12.027 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:14:12.038 [main] INFO  com.test.pages.CommonPage - Starting verification of Careers menu items and their content
+2025-02-04 14:14:12.039 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Driving Jobs'
+2025-02-04 14:14:13.867 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Driving Jobs'
+2025-02-04 14:14:35.946 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:14:35.947 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:14:49.629 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:14:49.639 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:14:50.280 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:14:50.333 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:16:44.113 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:16:44.120 [main] INFO  com.test.pages.CommonPage - Starting verification of Careers menu items and their content
+2025-02-04 14:16:44.120 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Driving Jobs'
+2025-02-04 14:16:45.921 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Driving Jobs'
+2025-02-04 14:16:55.993 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:16:55.993 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:19:45.921 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:19:45.926 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:19:46.417 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:19:46.463 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:19:52.575 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:19:52.587 [main] INFO  com.test.pages.CommonPage - Starting verification of Careers menu items and their content
+2025-02-04 14:19:52.587 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Driving Jobs'
+2025-02-04 14:19:54.312 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Driving Jobs'
+2025-02-04 14:19:58.475 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:19:58.475 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:20:57.794 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:20:57.798 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:20:58.281 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:20:58.340 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:21:04.122 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:21:04.128 [main] INFO  com.test.pages.CommonPage - Starting verification of Careers menu items and their content
+2025-02-04 14:21:04.128 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Driving Jobs'
+2025-02-04 14:21:05.842 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Driving Jobs'
+2025-02-04 14:21:10.052 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Driving Jobs' - URL: https://bisontransport.phenompro.com/ca/en, Title: Join Bison Transport Herd - Jobs for Job Seekers, Heading: Bison Transport Jobs
+2025-02-04 14:21:10.154 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Non-Driving Jobs'
+2025-02-04 14:21:11.815 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Non-Driving Jobs'
+2025-02-04 14:21:16.026 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Non-Driving Jobs' - URL: https://bisontransport.phenompro.com/ca/en, Title: Join Bison Transport Herd - Jobs for Job Seekers, Heading: Bison Transport Jobs
+2025-02-04 14:21:16.188 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Students & Graduates'
+2025-02-04 14:21:17.880 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Students & Graduates'
+2025-02-04 14:21:22.048 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:21:22.048 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:22:18.629 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:22:18.631 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:22:19.111 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:22:19.160 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:22:26.631 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:22:26.638 [main] INFO  com.test.pages.CommonPage - Starting verification of Careers menu items and their content
+2025-02-04 14:22:26.638 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Driving Jobs'
+2025-02-04 14:22:28.297 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Driving Jobs'
+2025-02-04 14:22:32.637 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Driving Jobs' - URL: https://bisontransport.phenompro.com/ca/en, Title: Join Bison Transport Herd - Jobs for Job Seekers, Heading: Bison Transport Jobs
+2025-02-04 14:22:32.747 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Non-Driving Jobs'
+2025-02-04 14:22:34.525 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Non-Driving Jobs'
+2025-02-04 14:22:38.794 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Non-Driving Jobs' - URL: https://bisontransport.phenompro.com/ca/en, Title: Join Bison Transport Herd - Jobs for Job Seekers, Heading: Bison Transport Jobs
+2025-02-04 14:22:38.934 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Students & Graduates'
+2025-02-04 14:22:40.616 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Students & Graduates'
+2025-02-04 14:22:44.750 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:22:44.750 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:24:14.993 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:24:15.001 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:24:15.494 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:24:15.563 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:24:21.857 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:24:21.862 [main] INFO  com.test.pages.CommonPage - Starting verification of Careers menu items and their content
+2025-02-04 14:24:21.862 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Driving Jobs'
+2025-02-04 14:24:23.550 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Driving Jobs'
+2025-02-04 14:24:28.465 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Driving Jobs' - URL: https://bisontransport.phenompro.com/ca/en, Title: Join Bison Transport Herd - Jobs for Job Seekers, Heading: Bison Transport Jobs
+2025-02-04 14:24:28.629 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Non-Driving Jobs'
+2025-02-04 14:24:30.672 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Non-Driving Jobs'
+2025-02-04 14:24:34.808 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Non-Driving Jobs' - URL: https://bisontransport.phenompro.com/ca/en, Title: Join Bison Transport Herd - Jobs for Job Seekers, Heading: Bison Transport Jobs
+2025-02-04 14:24:34.982 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Students & Graduates'
+2025-02-04 14:24:36.508 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Students & Graduates'
+2025-02-04 14:24:40.626 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Students & Graduates' - URL: https://bisontransport.phenompro.com/ca/en/bison-students-and-graduates, Title: Explore Bison Transport Jobs, Heading: Students and Graduates
+2025-02-04 14:24:40.736 [main] INFO  com.test.pages.CommonPage - Successfully verified all Careers menu items and their content
+2025-02-04 14:24:40.741 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_03 Verify Careers menu items and page content
+2025-02-04 14:32:53.154 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:32:53.159 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:32:53.638 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:32:53.702 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:32:59.662 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:32:59.674 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:33:29.630 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:33:29.639 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:33:30.097 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:33:30.138 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:33:44.683 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:33:44.691 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:33:45.096 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:33:45.136 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:33:53.250 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:33:53.258 [main] INFO  com.test.pages.CommonPage - Starting verification of Shippers menu items and their content
+2025-02-04 14:33:53.259 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Truckload'
+2025-02-04 14:34:19.676 [main] ERROR com.test.utils.BrowserUtils - Error while waiting and clicking element: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (f4cbbbfd19eea86b97feb41b75deb31f)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Truckload']] (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60141}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60141/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4cbbbfd19eea86b97feb41b75deb31f
+2025-02-04 14:34:19.676 [main] ERROR com.test.pages.CommonPage - Error verifying menu item 'Truckload': Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (f4cbbbfd19eea86b97feb41b75deb31f)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Truckload']] (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60141}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60141/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4cbbbfd19eea86b97feb41b75deb31f
+2025-02-04 14:34:19.693 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:34:19.694 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:34:39.839 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:34:39.847 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:34:40.353 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:34:40.409 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:34:48.033 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:34:48.038 [main] INFO  com.test.pages.CommonPage - Starting verification of Shippers menu items and their content
+2025-02-04 14:34:48.039 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Truckload'
+2025-02-04 14:34:50.697 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Truckload'
+2025-02-04 14:34:52.833 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Truckload' - URL: https://www.bisontransport.com/shippers/truckload, Title: Truckload - Bison Transport, Heading: TRUCKLOAD
+2025-02-04 14:34:52.910 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Intermodal'
+2025-02-04 14:35:19.586 [main] ERROR com.test.utils.BrowserUtils - Error while waiting and clicking element: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (c01ca2941c3694bc5cc5773edbcd11b9)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Intermodal']] (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60227}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60227/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c01ca2941c3694bc5cc5773edbcd11b9
+2025-02-04 14:35:19.587 [main] ERROR com.test.pages.CommonPage - Error verifying menu item 'Intermodal': Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (c01ca2941c3694bc5cc5773edbcd11b9)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Intermodal']] (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60227}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60227/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c01ca2941c3694bc5cc5773edbcd11b9
+2025-02-04 14:35:19.601 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:35:19.602 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:38:25.934 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:38:25.942 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:38:26.552 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:38:26.619 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:38:32.907 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:38:32.912 [main] INFO  com.test.pages.CommonPage - Starting verification of Shippers menu items and their content
+2025-02-04 14:38:32.912 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Truckload'
+2025-02-04 14:38:35.678 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Truckload'
+2025-02-04 14:38:37.804 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Truckload' - URL: https://www.bisontransport.com/shippers/truckload, Title: Truckload - Bison Transport, Heading: TRUCKLOAD
+2025-02-04 14:38:37.891 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Intermodal'
+2025-02-04 14:39:04.396 [main] ERROR com.test.utils.BrowserUtils - Error while waiting and clicking element: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (102c1f7308f7faa7cd364158362482cc)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Intermodal']] (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60386}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60386/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 102c1f7308f7faa7cd364158362482cc
+2025-02-04 14:39:04.397 [main] ERROR com.test.pages.CommonPage - Error verifying menu item 'Intermodal': Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (102c1f7308f7faa7cd364158362482cc)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Intermodal']] (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60386}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60386/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 102c1f7308f7faa7cd364158362482cc
+2025-02-04 14:39:04.455 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:39:04.455 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:39:46.873 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:39:46.880 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:39:47.725 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:39:47.823 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:39:56.384 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:39:56.390 [main] INFO  com.test.pages.CommonPage - Starting verification of Shippers menu items and their content
+2025-02-04 14:39:56.390 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Truckload'
+2025-02-04 14:39:59.074 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Truckload'
+2025-02-04 14:40:01.218 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Truckload' - URL: https://www.bisontransport.com/shippers/truckload, Title: Truckload - Bison Transport, Heading: TRUCKLOAD
+2025-02-04 14:40:01.605 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Intermodal'
+2025-02-04 14:40:28.203 [main] ERROR com.test.utils.BrowserUtils - Error while waiting and clicking element: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (1b9308e306b901a090228f3b19f63fb4)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Intermodal']] (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60495}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60495/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1b9308e306b901a090228f3b19f63fb4
+2025-02-04 14:40:28.205 [main] ERROR com.test.pages.CommonPage - Error verifying menu item 'Intermodal': Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (1b9308e306b901a090228f3b19f63fb4)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Intermodal']] (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60495}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60495/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1b9308e306b901a090228f3b19f63fb4
+2025-02-04 14:40:28.218 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:40:28.218 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:41:35.804 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:41:35.812 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:41:36.531 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:41:36.624 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:41:46.707 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:41:46.719 [main] INFO  com.test.pages.CommonPage - Starting verification of Shippers menu items and their content
+2025-02-04 14:41:46.720 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Truckload'
+2025-02-04 14:42:02.618 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Truckload'
+2025-02-04 14:42:05.016 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Truckload' - URL: https://www.bisontransport.com/shippers/truckload, Title: Truckload - Bison Transport, Heading: TRUCKLOAD
+2025-02-04 14:42:07.538 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Intermodal'
+2025-02-04 14:42:07.975 [main] ERROR com.test.pages.CommonPage - Error hovering over Shippers link: java.lang.reflect.InvocationTargetException
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b96078adce93dca1c9b7b073f48acf5e, actions {actions=[org.openqa.selenium.interactions.Sequence@46aa712c]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60601}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60601/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b96078adce93dca1c9b7b073f48acf5e
+2025-02-04 14:42:07.976 [main] ERROR com.test.pages.CommonPage - Error verifying menu item 'Intermodal': java.lang.reflect.InvocationTargetException
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b96078adce93dca1c9b7b073f48acf5e, actions {actions=[org.openqa.selenium.interactions.Sequence@46aa712c]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60601}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60601/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b96078adce93dca1c9b7b073f48acf5e
+2025-02-04 14:42:08.139 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:42:08.140 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:42:34.504 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:42:34.537 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:42:36.136 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:42:36.257 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:42:47.224 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:42:47.231 [main] INFO  com.test.pages.CommonPage - Starting verification of Shippers menu items and their content
+2025-02-04 14:42:47.231 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Truckload'
+2025-02-04 14:42:53.026 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Truckload'
+2025-02-04 14:42:55.168 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Truckload' - URL: https://www.bisontransport.com/shippers/truckload, Title: Truckload - Bison Transport, Heading: TRUCKLOAD
+2025-02-04 14:42:57.527 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Intermodal'
+2025-02-04 14:42:57.568 [main] ERROR com.test.pages.CommonPage - Error hovering over Shippers link: java.lang.reflect.InvocationTargetException
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0ebea3867f6e0c1b032757a62fa22cba, actions {actions=[org.openqa.selenium.interactions.Sequence@b25b095]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60697}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60697/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ebea3867f6e0c1b032757a62fa22cba
+2025-02-04 14:42:57.569 [main] ERROR com.test.pages.CommonPage - Error verifying menu item 'Intermodal': java.lang.reflect.InvocationTargetException
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0ebea3867f6e0c1b032757a62fa22cba, actions {actions=[org.openqa.selenium.interactions.Sequence@b25b095]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60697}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60697/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ebea3867f6e0c1b032757a62fa22cba
+2025-02-04 14:42:57.599 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:42:57.599 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:45:53.847 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:45:53.854 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 14:45:54.398 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 14:45:54.463 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 14:46:00.846 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 14:46:00.851 [main] INFO  com.test.pages.CommonPage - Starting verification of Shippers menu items and their content
+2025-02-04 14:46:00.851 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Truckload'
+2025-02-04 14:46:07.090 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Truckload'
+2025-02-04 14:46:09.469 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Truckload' - URL: https://www.bisontransport.com/shippers/truckload, Title: Truckload - Bison Transport, Heading: TRUCKLOAD
+2025-02-04 14:46:11.797 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Intermodal'
+2025-02-04 14:46:11.829 [main] ERROR com.test.pages.CommonPage - Error hovering over Shippers link: java.lang.reflect.InvocationTargetException
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e51cfec1658c63c3be9ad85301cc0a32, actions {actions=[org.openqa.selenium.interactions.Sequence@b25b095]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60837/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e51cfec1658c63c3be9ad85301cc0a32
+2025-02-04 14:46:11.829 [main] ERROR com.test.pages.CommonPage - Error verifying menu item 'Intermodal': java.lang.reflect.InvocationTargetException
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e51cfec1658c63c3be9ad85301cc0a32, actions {actions=[org.openqa.selenium.interactions.Sequence@b25b095]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60837/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e51cfec1658c63c3be9ad85301cc0a32
+2025-02-04 14:46:11.855 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 14:46:11.855 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 15:04:38.755 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 15:04:38.762 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 15:04:39.239 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 15:04:39.297 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 15:04:44.815 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 15:04:44.819 [main] INFO  com.test.pages.CommonPage - Starting verification of Shippers menu items and their content
+2025-02-04 15:04:44.819 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Truckload'
+2025-02-04 15:04:49.265 [main] ERROR com.test.utils.BrowserUtils - Error while waiting and clicking element: element click intercepted: Element <span class="x-anchor-text-primary">...</span> is not clickable at point (813, 652). Other element would receive the click: <h1 class="x-text-content-text-primary">...</h1>
+  (Session info: chrome=132.0.6834.160)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [20486c6812dfcd133f0f22d1d6e6d8c1, clickElement {id=f.1198FB4A922D8586ED05EE4D9885FDE4.d.221EA9319B3833F942AA2E04563EC6C9.e.363}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61372}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61372/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (20486c6812dfcd133f0f22d1d6e6d8c1)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Truckload']]
+Session ID: 20486c6812dfcd133f0f22d1d6e6d8c1
+2025-02-04 15:04:51.503 [main] ERROR com.test.utils.BrowserUtils - Error while waiting and clicking element: element click intercepted: Element <span class="x-anchor-text-primary">...</span> is not clickable at point (813, 652). Other element would receive the click: <h1 class="x-text-content-text-primary">...</h1>
+  (Session info: chrome=132.0.6834.160)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [20486c6812dfcd133f0f22d1d6e6d8c1, clickElement {id=f.1198FB4A922D8586ED05EE4D9885FDE4.d.221EA9319B3833F942AA2E04563EC6C9.e.363}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61372}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61372/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (20486c6812dfcd133f0f22d1d6e6d8c1)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Truckload']]
+Session ID: 20486c6812dfcd133f0f22d1d6e6d8c1
+2025-02-04 15:04:53.718 [main] ERROR com.test.utils.BrowserUtils - Error while waiting and clicking element: element click intercepted: Element <span class="x-anchor-text-primary">...</span> is not clickable at point (813, 652). Other element would receive the click: <h1 class="x-text-content-text-primary">...</h1>
+  (Session info: chrome=132.0.6834.160)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [20486c6812dfcd133f0f22d1d6e6d8c1, clickElement {id=f.1198FB4A922D8586ED05EE4D9885FDE4.d.221EA9319B3833F942AA2E04563EC6C9.e.363}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61372}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61372/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (20486c6812dfcd133f0f22d1d6e6d8c1)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Truckload']]
+Session ID: 20486c6812dfcd133f0f22d1d6e6d8c1
+2025-02-04 15:04:53.719 [main] ERROR com.test.pages.CommonPage - Error verifying menu item 'Truckload': element click intercepted: Element <span class="x-anchor-text-primary">...</span> is not clickable at point (813, 652). Other element would receive the click: <h1 class="x-text-content-text-primary">...</h1>
+  (Session info: chrome=132.0.6834.160)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [20486c6812dfcd133f0f22d1d6e6d8c1, clickElement {id=f.1198FB4A922D8586ED05EE4D9885FDE4.d.221EA9319B3833F942AA2E04563EC6C9.e.363}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61372}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61372/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (20486c6812dfcd133f0f22d1d6e6d8c1)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Truckload']]
+Session ID: 20486c6812dfcd133f0f22d1d6e6d8c1
+2025-02-04 15:04:53.730 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 15:04:53.730 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 15:11:26.213 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 15:11:26.220 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 15:11:26.698 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 15:11:26.748 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 15:11:30.026 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 15:11:30.040 [main] INFO  com.test.pages.CommonPage - Starting verification of Shippers menu items and their content
+2025-02-04 15:11:30.041 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Truckload'
+2025-02-04 15:11:37.700 [main] ERROR com.test.utils.BrowserUtils - Error while waiting and clicking element: element click intercepted: Element <span class="x-anchor-text-primary">...</span> is not clickable at point (813, 652). Other element would receive the click: <h1 class="x-text-content-text-primary">...</h1>
+  (Session info: chrome=132.0.6834.160)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a469113fc9a2009bf5b6de369aa829af, clickElement {id=f.60050788317B3F631EB94D9A6129CDB1.d.504D2EED26D8D0338410F5A4C41583B9.e.304}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61554}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61554/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a469113fc9a2009bf5b6de369aa829af)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Truckload']]
+Session ID: a469113fc9a2009bf5b6de369aa829af
+2025-02-04 15:11:39.902 [main] ERROR com.test.utils.BrowserUtils - Error while waiting and clicking element: element click intercepted: Element <span class="x-anchor-text-primary">...</span> is not clickable at point (813, 652). Other element would receive the click: <h1 class="x-text-content-text-primary">...</h1>
+  (Session info: chrome=132.0.6834.160)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a469113fc9a2009bf5b6de369aa829af, clickElement {id=f.60050788317B3F631EB94D9A6129CDB1.d.504D2EED26D8D0338410F5A4C41583B9.e.304}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61554}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61554/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a469113fc9a2009bf5b6de369aa829af)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Truckload']]
+Session ID: a469113fc9a2009bf5b6de369aa829af
+2025-02-04 15:11:42.037 [main] ERROR com.test.utils.BrowserUtils - Error while waiting and clicking element: element click intercepted: Element <span class="x-anchor-text-primary">...</span> is not clickable at point (813, 652). Other element would receive the click: <h1 class="x-text-content-text-primary">...</h1>
+  (Session info: chrome=132.0.6834.160)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a469113fc9a2009bf5b6de369aa829af, clickElement {id=f.60050788317B3F631EB94D9A6129CDB1.d.504D2EED26D8D0338410F5A4C41583B9.e.304}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61554}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61554/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a469113fc9a2009bf5b6de369aa829af)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Truckload']]
+Session ID: a469113fc9a2009bf5b6de369aa829af
+2025-02-04 15:11:42.038 [main] ERROR com.test.pages.CommonPage - Error verifying menu item 'Truckload': element click intercepted: Element <span class="x-anchor-text-primary">...</span> is not clickable at point (813, 652). Other element would receive the click: <h1 class="x-text-content-text-primary">...</h1>
+  (Session info: chrome=132.0.6834.160)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a469113fc9a2009bf5b6de369aa829af, clickElement {id=f.60050788317B3F631EB94D9A6129CDB1.d.504D2EED26D8D0338410F5A4C41583B9.e.304}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61554}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61554/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a469113fc9a2009bf5b6de369aa829af)] -> xpath: //span[contains(@class, 'x-anchor-text-primary') and text()='Truckload']]
+Session ID: a469113fc9a2009bf5b6de369aa829af
+2025-02-04 15:11:42.052 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-04 15:11:42.052 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
