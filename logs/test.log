@@ -930,3 +930,120 @@ Session ID: b8b750afc11aaf96f24d688c68e15967
 2025-02-04 00:03:42.991 [main] INFO  com.test.pages.CommonPage - Successfully verified URL contains: 'blog'
 2025-02-04 00:03:45.015 [main] INFO  com.test.pages.CommonPage - Successfully verified page title contains: 'Blog - Bison Transport'
 2025-02-04 00:03:45.018 [main] INFO  BisonTransport - Finished scenario: TC_02 Verify About menu items and page content
+2025-02-04 00:36:19.496 [main] INFO  BisonTransport - Starting scenario: TC_02 Verify About menu items and page content
+2025-02-04 00:36:19.503 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 00:36:20.011 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 00:36:20.064 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 00:38:33.227 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 00:38:33.237 [main] INFO  com.test.pages.CommonPage - Starting verification of About menu items and their content
+2025-02-04 00:38:33.237 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Who We Are'
+2025-02-04 00:38:44.961 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Who We Are'
+2025-02-04 00:38:47.071 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Who We Are' - URL: about, Title: About - Bison Transport, Heading: ABOUT US
+2025-02-04 00:38:47.071 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Leadership'
+2025-02-04 00:40:42.035 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Leadership'
+2025-02-04 00:40:44.190 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Leadership' - URL: leadership, Title: Leadership - Bison Transport, Heading: OUR LEADERSHIP
+2025-02-04 00:40:44.191 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Our Culture'
+2025-02-04 00:40:50.767 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Our Culture'
+2025-02-04 00:40:52.885 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Our Culture' - URL: our-culture, Title: Culture - Bison Transport, Heading: OUR CULTURE
+2025-02-04 00:40:52.885 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'History'
+2025-02-04 00:41:23.547 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'History'
+2025-02-04 00:41:25.636 [main] ERROR BisonTransport - Scenario failed: TC_02 Verify About menu items and page content
+2025-02-04 00:41:25.638 [main] INFO  BisonTransport - Finished scenario: TC_02 Verify About menu items and page content
+2025-02-04 00:44:42.193 [main] INFO  BisonTransport - Starting scenario: TC_02 Verify About menu items and page content
+2025-02-04 00:44:42.199 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 00:44:42.709 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 00:44:42.764 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 00:46:59.184 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 00:46:59.189 [main] INFO  com.test.pages.CommonPage - Starting verification of About menu items and their content
+2025-02-04 00:46:59.189 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Who We Are'
+2025-02-04 00:47:37.751 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Who We Are'
+2025-02-04 00:47:39.955 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Who We Are' - URL: about, Title: About - Bison Transport, Heading: ABOUT US
+2025-02-04 00:47:39.955 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Leadership'
+2025-02-04 00:47:52.838 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Leadership'
+2025-02-04 00:47:54.987 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Leadership' - URL: leadership, Title: Leadership - Bison Transport, Heading: OUR LEADERSHIP
+2025-02-04 00:47:54.988 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Our Culture'
+2025-02-04 00:48:05.736 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Our Culture'
+2025-02-04 00:48:07.883 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Our Culture' - URL: our-culture, Title: Culture - Bison Transport, Heading: OUR CULTURE
+2025-02-04 00:48:07.883 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'History'
+2025-02-04 00:48:44.143 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'History'
+2025-02-04 00:48:46.286 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'History' - URL: history, Title: History - Bison Transport, Heading: BISON'S HISTORY
+2025-02-04 00:48:46.286 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Environmental, Social & Governance'
+2025-02-04 00:48:52.147 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Environmental, Social & Governance'
+2025-02-04 00:48:54.285 [main] ERROR BisonTransport - Scenario failed: TC_02 Verify About menu items and page content
+2025-02-04 00:48:54.285 [main] INFO  BisonTransport - Finished scenario: TC_02 Verify About menu items and page content
+2025-02-04 00:50:46.404 [main] INFO  BisonTransport - Starting scenario: TC_02 Verify About menu items and page content
+2025-02-04 00:50:46.411 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 00:50:47.102 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 00:50:47.147 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 00:52:56.704 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 00:52:56.708 [main] INFO  com.test.pages.CommonPage - Starting verification of About menu items and their content
+2025-02-04 00:52:56.710 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Who We Are'
+2025-02-04 00:53:07.559 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Who We Are'
+2025-02-04 00:53:09.761 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Who We Are' - URL: about, Title: About - Bison Transport, Heading: ABOUT US
+2025-02-04 00:53:09.761 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Leadership'
+2025-02-04 00:55:02.492 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Leadership'
+2025-02-04 00:55:04.648 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Leadership' - URL: leadership, Title: Leadership - Bison Transport, Heading: OUR LEADERSHIP
+2025-02-04 00:55:04.648 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Our Culture'
+2025-02-04 00:55:11.659 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Our Culture'
+2025-02-04 00:55:13.747 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Our Culture' - URL: our-culture, Title: Culture - Bison Transport, Heading: OUR CULTURE
+2025-02-04 00:55:13.747 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'History'
+2025-02-04 00:55:39.510 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'History'
+2025-02-04 00:55:41.622 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'History' - URL: history, Title: History - Bison Transport, Heading: BISON'S HISTORY
+2025-02-04 00:55:41.622 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Environmental, Social & Governance'
+2025-02-04 00:55:45.320 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Environmental, Social & Governance'
+2025-02-04 00:55:47.469 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Environmental, Social & Governance' - URL: environmental-social-governance, Title: Environmental, Social & Governance - Bison Transport, Heading: ENVIRONMENTAL, SOCIAL AND GOVERNANCE
+2025-02-04 00:55:47.470 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Blog'
+2025-02-04 00:55:59.717 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Blog'
+2025-02-04 00:56:01.864 [main] ERROR BisonTransport - Scenario failed: TC_02 Verify About menu items and page content
+2025-02-04 00:56:01.865 [main] INFO  BisonTransport - Finished scenario: TC_02 Verify About menu items and page content
+2025-02-04 00:56:42.451 [main] INFO  BisonTransport - Starting scenario: TC_02 Verify About menu items and page content
+2025-02-04 00:56:42.457 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 00:56:42.965 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 00:56:43.021 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 00:59:26.701 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 00:59:26.706 [main] INFO  com.test.pages.CommonPage - Starting verification of About menu items and their content
+2025-02-04 00:59:26.707 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Who We Are'
+2025-02-04 01:00:25.276 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Who We Are'
+2025-02-04 01:00:27.362 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Who We Are' - URL: about, Title: About - Bison Transport, Heading: ABOUT US
+2025-02-04 01:00:27.362 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Leadership'
+2025-02-04 01:01:52.286 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Leadership'
+2025-02-04 01:01:54.697 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Leadership' - URL: leadership, Title: Leadership - Bison Transport, Heading: OUR LEADERSHIP
+2025-02-04 01:01:54.697 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Our Culture'
+2025-02-04 01:02:01.105 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Our Culture'
+2025-02-04 01:02:03.349 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Our Culture' - URL: our-culture, Title: Culture - Bison Transport, Heading: OUR CULTURE
+2025-02-04 01:02:03.349 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'History'
+2025-02-04 01:02:31.403 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'History'
+2025-02-04 01:02:33.503 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'History' - URL: history, Title: History - Bison Transport, Heading: BISON'S HISTORY
+2025-02-04 01:02:33.503 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Environmental, Social & Governance'
+2025-02-04 01:02:52.677 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Environmental, Social & Governance'
+2025-02-04 01:02:54.782 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Environmental, Social & Governance' - URL: environmental-social-governance, Title: Environmental, Social & Governance - Bison Transport, Heading: ENVIRONMENTAL, SOCIAL AND GOVERNANCE
+2025-02-04 01:02:54.783 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Blog'
+2025-02-04 01:03:08.330 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Blog'
+2025-02-04 01:03:10.640 [main] ERROR BisonTransport - Scenario failed: TC_02 Verify About menu items and page content
+2025-02-04 01:03:10.640 [main] INFO  BisonTransport - Finished scenario: TC_02 Verify About menu items and page content
+2025-02-04 01:04:42.159 [main] INFO  BisonTransport - Starting scenario: TC_02 Verify About menu items and page content
+2025-02-04 01:04:42.165 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-04 01:04:43.018 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-04 01:04:43.049 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-04 01:07:08.152 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-04 01:07:08.160 [main] INFO  com.test.pages.CommonPage - Starting verification of About menu items and their content
+2025-02-04 01:07:08.160 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Who We Are'
+2025-02-04 01:07:17.783 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Who We Are'
+2025-02-04 01:07:19.869 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Who We Are' - URL: about, Title: About - Bison Transport, Heading: ABOUT US
+2025-02-04 01:07:19.870 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Leadership'
+2025-02-04 01:09:26.107 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Leadership'
+2025-02-04 01:09:28.184 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Leadership' - URL: leadership, Title: Leadership - Bison Transport, Heading: OUR LEADERSHIP
+2025-02-04 01:09:28.184 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Our Culture'
+2025-02-04 01:09:32.683 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Our Culture'
+2025-02-04 01:09:34.746 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Our Culture' - URL: our-culture, Title: Culture - Bison Transport, Heading: OUR CULTURE
+2025-02-04 01:09:34.746 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'History'
+2025-02-04 01:10:08.460 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'History'
+2025-02-04 01:10:10.995 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'History' - URL: history, Title: History - Bison Transport, Heading: BISON'S HISTORY
+2025-02-04 01:10:10.996 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Environmental, Social & Governance'
+2025-02-04 01:10:26.092 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Environmental, Social & Governance'
+2025-02-04 01:10:28.319 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Environmental, Social & Governance' - URL: environmental-social-governance, Title: Environmental, Social & Governance - Bison Transport, Heading: ENVIRONMENTAL, SOCIAL AND GOVERNANCE
+2025-02-04 01:10:28.320 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Blog'
+2025-02-04 01:10:34.867 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Blog'
+2025-02-04 01:10:37.708 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Blog' - URL: blog, Title: Blog - Bison Transport, Heading: BISON BLOG
+2025-02-04 01:10:37.709 [main] INFO  com.test.pages.CommonPage - Successfully verified all About menu items and their content
+2025-02-04 01:10:37.711 [main] INFO  BisonTransport - Finished scenario: TC_02 Verify About menu items and page content

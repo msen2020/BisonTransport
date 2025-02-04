@@ -173,4 +173,68 @@ public class HP_01 extends CommonPage {
         logger.info("Hovering over About link");
         homePage().hoverOverAboutLink();
     }
+
+    @Then("verify About menu items and their content")
+    public void verifyAboutMenuItemsAndTheirContent(DataTable dataTable) {
+        List<Map<String, String>> data = dataTable.asMaps();
+        
+        logger.info("Starting verification of About menu items and their content");
+        
+        for (Map<String, String> row : data) {
+            String menuItem = row.get("menuItem");
+            String expectedUrl = row.get("url");
+            String expectedTitle = row.get("pageTitle");
+            String expectedHeading = row.get("heading");
+            
+            try {
+                // Hover over About link
+                logger.info("Verifying menu item: '{}'", menuItem);
+                homePage().hoverOverAboutLink();
+                
+                // Click menu item
+                WebElement element = getDriver().findElement(
+                    By.xpath("//span[contains(@class, 'x-anchor-text-primary') and text()='" + menuItem + "']")
+                );
+                BrowserUtils.waitAndClick(element);
+                logger.info("Clicked menu item: '{}'", menuItem);
+                
+                // Verify URL
+                BrowserUtils.sleep(2);
+                BrowserUtils.waitForPageToLoad(25);
+                String currentUrl = getDriver().getCurrentUrl().toLowerCase();
+                Assert.assertTrue(
+                    String.format("URL should contain '%s', but was '%s'", 
+                        expectedUrl, currentUrl),
+                    currentUrl.contains(expectedUrl.toLowerCase())
+                );
+                
+                // Verify page title
+                String actualTitle = getDriver().getTitle();
+                Assert.assertTrue(
+                    String.format("Page title should contain '%s', but was '%s'", 
+                        expectedTitle, actualTitle),
+                    actualTitle.contains(expectedTitle)
+                );
+                
+                // Verify heading
+                WebElement heading = getDriver().findElement(By.cssSelector("h1.x-text-content-text-primary"));
+                BrowserUtils.waitForVisibility(heading);
+                String actualHeading = heading.getText().trim();
+                Assert.assertTrue(
+                    String.format("Page heading should contain '%s', but was '%s'", 
+                        expectedHeading, actualHeading),
+                    actualHeading.equalsIgnoreCase(expectedHeading)
+                );
+                
+                logger.info("Successfully verified menu item '{}' - URL: {}, Title: {}, Heading: {}", 
+                    menuItem, expectedUrl, expectedTitle, expectedHeading);
+                
+            } catch (Exception e) {
+                logger.error("Error verifying menu item '{}': {}", menuItem, e.getMessage());
+                throw e;
+            }
+        }
+        
+        logger.info("Successfully verified all About menu items and their content");
+    }
 } 
