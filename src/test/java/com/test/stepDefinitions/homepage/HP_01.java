@@ -334,13 +334,13 @@ public class HP_01 extends CommonPage {
             String expectedHeading = row.get("heading");
             
             try {
-                // Hover over Shippers link and wait for submenu
+                // Hover over Shippers links and waits for submenu
                 logger.info("Verifying menu item: '{}'", menuItem);
                 homePage().hoverOverShippersLink();
                 BrowserUtils.wait(3); // Increased wait for submenu animation
                 
-                // Store the current window handle
-                String mainWindow = driver().getWindowHandle();
+//                // Store the current window handle
+//                String mainWindow = driver().getWindowHandle();
                 
                 // Click menu item with retry logic
                 int maxRetries = 3;
@@ -353,7 +353,7 @@ public class HP_01 extends CommonPage {
                             By.xpath("//span[contains(@class, 'x-anchor-text-primary') and text()='" + menuItem + "']")
                         );
                         if (!element.isDisplayed()) {
-                            homePage().hoverOverShippersLink(); // Hover again if element not visible
+                            homePage().hoverOverShippersLink(); // Hover again if an element not visible
                             BrowserUtils.wait(2); // Increased wait after hover
                         }
                         BrowserUtils.waitAndClick(element);
@@ -370,12 +370,12 @@ public class HP_01 extends CommonPage {
                 
                 // Switch to new tab with increased wait
                 BrowserUtils.wait(5); // Increased wait for new tab
-                Set<String> windowHandles = driver().getWindowHandles();
-                String newWindow = windowHandles.stream()
-                    .filter(handle -> !handle.equals(mainWindow))
-                    .findFirst()
-                    .orElseThrow(() -> new RuntimeException("New window was not opened"));
-                driver().switchTo().window(newWindow);
+//                Set<String> windowHandles = driver().getWindowHandles();
+//                String newWindow = windowHandles.stream()
+//                    .filter(handle -> !handle.equals(mainWindow))
+//                    .findFirst()
+//                    .orElseThrow(() -> new RuntimeException("New window was not opened"));
+//                driver().switchTo().window(newWindow);
                 
                 // Wait for a page load with increased timeout
                 BrowserUtils.waitForPageToLoad(45); // Increased page load timeout
@@ -420,9 +420,9 @@ public class HP_01 extends CommonPage {
                 logger.info("Successfully verified menu item '{}' - URL: {}, Title: {}, Heading: {}", 
                     menuItem, expectedUrl, expectedTitle, expectedHeading);
                 
-                // Close new tab and switch back with increased wait
+                // Close the new tab and switch back with increased wait
                 driver().close();
-                driver().switchTo().window(mainWindow);
+//                driver().switchTo().window(mainWindow);
                 BrowserUtils.wait(3); // Increased wait after switching back
                 
             } catch (Exception e) {

@@ -9,20 +9,19 @@ import static com.test.hooks.Hooks.driver;
 
 public class LOG_01 extends CommonPage {
 
-    @Given("user goes to Bison Transport page")
-    public void user_goes_to_bison_transport_page() {
-        driver.get("https://www.bisontransport.com/");
-        logger.info("Navigated to Bison Transport website");
-    }
-
     @Then("user verifies the title of the page")
     public void userVerifiesTheTitleOfThePage() {
-        logger.info("Verifying page title");
-        String expectedTitle = "Bison | North America's Trusted Supply Chain Solution";
+        logger.info("Waiting for the page to load...");
+        BrowserUtils.waitForPageToLoad(60); // Wait for the page to load completely
 
+        logger.info("Verifying page title");
+        String actualTitle = BrowserUtils.getPageTitle(); // Get the actual title
+        logger.info("Actual page title: {}", actualTitle); // Log the actual title
+
+        String expectedTitle = "Bison | North America's Trusted Supply Chain Solution";
         Assert.assertTrue(
                 String.format("Page title should be '%s'", expectedTitle),
-                BrowserUtils.verifyPageTitle(expectedTitle, true)
+                actualTitle.equals(expectedTitle) // Compare actual title with expected title
         );
 
         logger.info("Successfully verified page title");

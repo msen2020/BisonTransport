@@ -3,7 +3,6 @@ Feature: HP_01 Verify Home Page Navigation Bar
 
   @HP_01_TC_01 @homepage @smoke
   Scenario: HP_01_TC_01 Verify navbar titles are visible and functional
-    Given user goes to Bison Transport page
     Then user verifies the titles are displayed & functional in the navbar
       | About             |
       | Careers           |
@@ -16,7 +15,6 @@ Feature: HP_01 Verify Home Page Navigation Bar
 
   @HP_01_TC_02 @homepage @smoke
   Scenario: HP_01_TC_02 Verify About menu items and page content
-    Given user goes to Bison Transport page
     Then verify About menu items and their content
       | menuItem                           | url                             | pageTitle                                            | heading                              |
       | Who We Are                         | about                           | About - Bison Transport                              | ABOUT US                             |
@@ -28,7 +26,6 @@ Feature: HP_01 Verify Home Page Navigation Bar
 
   @HP_01_TC_03 @homepage @smoke
   Scenario: HP_01_TC_03 Verify Careers menu items and page content
-    Given user goes to Bison Transport page
     Then verify Careers menu items and their content
       | menuItem             | url                                                                     | pageTitle                                        | heading                |
       | Driving Jobs         | https://bisontransport.phenompro.com/ca/en                              | Join Bison Transport Herd - Jobs for Job Seekers | Bison Transport Jobs   |
@@ -37,7 +34,6 @@ Feature: HP_01 Verify Home Page Navigation Bar
 
   @HP_01_TC_04 @homepage @smoke
   Scenario: HP_01_TC_04 Verify Shippers menu items and page content
-    Given user goes to Bison Transport page
     Then verify Shippers menu items and their content
       | menuItem      | url                                                | pageTitle                    | heading       |
       | Truckload     | https://www.bisontransport.com/shippers/truckload  | Truckload - Bison Transport  | TRUCKLOAD     |

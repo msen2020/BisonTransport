@@ -1,6 +1,5 @@
 package com.test.hooks;
 
-import com.test.pages.HomePage;
 import com.test.driver.DriverManager;
 
 import io.cucumber.java.After;
@@ -15,13 +14,15 @@ public class Hooks {
     public static final Logger logger = LoggerFactory.getLogger("BisonTransport");
     public static Actions actions;
     public static WebDriver driver;
-
+    public static String baseUrl;
 
     @Before
     public void setUp(Scenario scenario) {
         logger.info("Starting scenario: {}", scenario.getName());
-        DriverManager.getInstance().getDriver("chrome");
-        actions = new Actions(DriverManager.getInstance().getCurrentDriver());
+        driver = DriverManager.getInstance().getDriver("chrome");
+        actions = new Actions(driver);
+        baseUrl = "https://www.bisontransport.com/";
+        driver.get(baseUrl);
     }
 
     @After
@@ -37,6 +38,6 @@ public class Hooks {
 
     // Add the driver() method to access the WebDriver
     public static WebDriver driver() {
-        return DriverManager.getInstance().getCurrentDriver();
+        return driver;
     }
 } 

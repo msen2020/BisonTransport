@@ -4,7 +4,6 @@ Feature: Login
   @login
   @LOG_01
   Scenario: LOG_01_TC_01 Verify Login Herd and iTools functionality
-    Given user goes to Bison Transport page
     Then user verifies the title of the page
     And user verifies Login Herd and iTools links are displayed
     When user clicks on Login Herd link
