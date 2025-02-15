@@ -17,7 +17,6 @@ public abstract class CommonPage {
     // Page instances
     private HomePage homePage;
     private LoginPage loginPage;
-    private ShippingPage shippingPage;
 
     public CommonPage() {
         driver = DriverManager.getInstance().getCurrentDriver();
@@ -75,10 +74,4 @@ public abstract class CommonPage {
         return loginPage;
     }
 
-    public ShippingPage shippingPage() {
-        if (shippingPage == null) {
-            shippingPage = new ShippingPage();
-        }
-        return shippingPage;
-    }
-} 
+}

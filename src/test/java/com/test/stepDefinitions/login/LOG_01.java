@@ -5,7 +5,7 @@ import com.test.utils.BrowserUtils;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 
-import static com.test.utils.BrowserUtils.getDriver;
+import static com.test.hooks.Hooks.driver;
 
 public class LOG_01 extends CommonPage {
 
@@ -69,7 +69,7 @@ public class LOG_01 extends CommonPage {
     @Then("user closes the current tab")
     public void userClosesTheCurrentTab() {
         logger.info("Closing current tab");
-        getDriver().close();
+        driver().close();
         BrowserUtils.switchToMainWindow();
         BrowserUtils.waitForPageToLoad(25);
     }
@@ -78,7 +78,7 @@ public class LOG_01 extends CommonPage {
     public void userVerifiesTheTitleOfTheIToolsLoginPage() {
         logger.info("Verifying iTools login page");
         BrowserUtils.waitForPageToLoad(25);
-        String pageText = getDriver().getPageSource();
+        String pageText = driver().getPageSource();
         Assert.assertTrue("Should see 'Customer Login' on iTools page",
             pageText.contains("Customer Login"));
     }

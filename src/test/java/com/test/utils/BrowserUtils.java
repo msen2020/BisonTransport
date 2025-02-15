@@ -1,7 +1,6 @@
 package com.test.utils;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,22 +17,14 @@ public class BrowserUtils {
     private static final Duration DEFAULT_TIMEOUT = Duration.ofSeconds(DEFAULT_TIMEOUT_SECONDS);
     private static final Duration LONG_TIMEOUT = Duration.ofSeconds(25);
 
-    public static WebDriver getDriver() {
-        return DriverManager.getInstance().getCurrentDriver();
-    }
-
     public static void scrollDown(WebElement element) {
-        try {
-            ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            logger.error("Error while scrolling to element: {}", e.getMessage());
-        }
+        ((JavascriptExecutor) DriverManager.getInstance().getCurrentDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+        wait(1);
     }
 
     public static void waitAndClick(WebElement element) {
         try {
-            new WebDriverWait(getDriver(), DEFAULT_TIMEOUT)
+            new WebDriverWait(DriverManager.getInstance().getCurrentDriver(), DEFAULT_TIMEOUT)
                 .until(ExpectedConditions.elementToBeClickable(element)).click();
         } catch (Exception e) {
             logger.error("Error while waiting and clicking element: {}", e.getMessage());
@@ -43,7 +34,7 @@ public class BrowserUtils {
 
     public static void waitForVisibility(WebElement element) {
         try {
-            new WebDriverWait(getDriver(), DEFAULT_TIMEOUT)
+            new WebDriverWait(DriverManager.getInstance().getCurrentDriver(), DEFAULT_TIMEOUT)
                 .until(ExpectedConditions.visibilityOf(element));
         } catch (Exception e) {
             logger.error("Error while waiting for element visibility: {}", e.getMessage());
@@ -52,7 +43,7 @@ public class BrowserUtils {
 
     public static void switchToIframe(WebElement iframe) {
         try {
-            getDriver().switchTo().frame(iframe);
+            DriverManager.getInstance().getCurrentDriver().switchTo().frame(iframe);
             logger.info("Successfully switched to iframe");
         } catch (Exception e) {
             logger.error("Error while switching to iframe: {}", e.getMessage());
@@ -62,24 +53,24 @@ public class BrowserUtils {
 
     public static void switchToDefaultContent() {
         try {
-            getDriver().switchTo().defaultContent();
+            DriverManager.getInstance().getCurrentDriver().switchTo().defaultContent();
             logger.info("Successfully switched to default content");
         } catch (Exception e) {
             logger.error("Error while switching to default content: {}", e.getMessage());
         }
     }
 
-    public static void sleep(int seconds) {
+    public static void wait(int seconds) {
         try {
             Thread.sleep(seconds * 1000L);
         } catch (InterruptedException e) {
-            logger.error("Sleep interrupted: {}", e.getMessage());
+            logger.error("Wait interrupted: {}", e.getMessage());
         }
     }
 
     public static void implicitWait(int seconds) {
         try {
-            getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
+            DriverManager.getInstance().getCurrentDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
             logger.debug("Set implicit wait to {} seconds", seconds);
         } catch (Exception e) {
             logger.error("Error while setting implicit wait: {}", e.getMessage());
@@ -94,7 +85,7 @@ public class BrowserUtils {
      */
     public static void waitForTitleContains(String titleText, int timeoutInSeconds) {
         try {
-            WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(timeoutInSeconds));
+            WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getCurrentDriver(), Duration.ofSeconds(timeoutInSeconds));
             wait.until(ExpectedConditions.titleContains(titleText));
             logger.debug("Successfully waited for title to contain: '{}'", titleText);
         } catch (Exception e) {
@@ -109,7 +100,7 @@ public class BrowserUtils {
      */
     public static void waitForPageToLoad(int timeoutInSeconds) {
         try {
-            WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(timeoutInSeconds));
+            WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getCurrentDriver(), Duration.ofSeconds(timeoutInSeconds));
             wait.until(webDriver -> ((JavascriptExecutor) webDriver)
                     .executeScript("return document.readyState").equals("complete"));
             logger.debug("Page loaded completely");
@@ -121,7 +112,7 @@ public class BrowserUtils {
 
     public static void waitForElementToBeClickable(WebElement element) {
         try {
-            WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+            WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getCurrentDriver(), Duration.ofSeconds(10));
             wait.until(ExpectedConditions.elementToBeClickable(element));
             logger.debug("Element is now clickable");
         } catch (Exception e) {
@@ -140,7 +131,7 @@ public class BrowserUtils {
     public static boolean waitForUrlChange(String oldUrl, int timeoutSeconds) {
         try {
             logger.debug("Waiting for URL to change from: {} (timeout: {}s)", oldUrl, timeoutSeconds);
-            WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(timeoutSeconds));
+            WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getCurrentDriver(), Duration.ofSeconds(timeoutSeconds));
             
             return wait.until(webDriver -> {
                 String newUrl = webDriver.getCurrentUrl();
@@ -163,7 +154,7 @@ public class BrowserUtils {
      */
     public static void waitForUrlChange(String oldUrl) {
         if (!waitForUrlChange(oldUrl, DEFAULT_TIMEOUT_SECONDS)) {
-            String currentUrl = getDriver().getCurrentUrl();
+            String currentUrl = DriverManager.getInstance().getCurrentDriver().getCurrentUrl();
             throw new RuntimeException(String.format(
                 "URL did not change from '%s' within %d seconds. Current URL: '%s'",
                 oldUrl, DEFAULT_TIMEOUT_SECONDS, currentUrl
@@ -178,7 +169,7 @@ public class BrowserUtils {
      */
     public static String getPageTitle() {
         try {
-            String title = getDriver().getTitle();
+            String title = DriverManager.getInstance().getCurrentDriver().getTitle();
             logger.debug("Current page title: '{}'", title);
             return title;
         } catch (Exception e) {
@@ -216,12 +207,12 @@ public class BrowserUtils {
      */
     public static void switchToNewWindow() {
         try {
-            String currentHandle = getDriver().getWindowHandle();
-            Set<String> handles = getDriver().getWindowHandles();
+            String currentHandle = DriverManager.getInstance().getCurrentDriver().getWindowHandle();
+            Set<String> handles = DriverManager.getInstance().getCurrentDriver().getWindowHandles();
             for (String handle : handles) {
                 if (!handle.equals(currentHandle)) {
-                    getDriver().switchTo().window(handle);
-                    logger.debug("Switched to new window. Title: '{}'", getDriver().getTitle());
+                    DriverManager.getInstance().getCurrentDriver().switchTo().window(handle);
+                    logger.debug("Switched to new window. Title: '{}'", DriverManager.getInstance().getCurrentDriver().getTitle());
                     break;
                 }
             }
@@ -236,9 +227,9 @@ public class BrowserUtils {
      */
     public static void switchToMainWindow() {
         try {
-            Set<String> handles = getDriver().getWindowHandles();
-            getDriver().switchTo().window(handles.iterator().next());
-            logger.debug("Switched back to main window. Title: '{}'", getDriver().getTitle());
+            Set<String> handles = DriverManager.getInstance().getCurrentDriver().getWindowHandles();
+            DriverManager.getInstance().getCurrentDriver().switchTo().window(handles.iterator().next());
+            logger.debug("Switched back to main window. Title: '{}'", DriverManager.getInstance().getCurrentDriver().getTitle());
         } catch (Exception e) {
             logger.error("Error switching to main window: {}", e.getMessage());
             throw e;

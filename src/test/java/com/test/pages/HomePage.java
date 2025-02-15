@@ -110,7 +110,7 @@ public class HomePage extends CommonPage {
             logger.info("Attempting to click About link");
             BrowserUtils.waitForElementToBeClickable(aboutLink);
             actions.moveToElement(aboutLink).perform();
-            BrowserUtils.sleep(1);
+            BrowserUtils.wait(1);
             BrowserUtils.waitAndClick(aboutLink);
             BrowserUtils.waitForPageToLoad(25);
             logger.info("Successfully clicked About link");
@@ -123,7 +123,7 @@ public class HomePage extends CommonPage {
     public boolean isSubmenuLinkVisible(String linkText) {
         try {
             actions.moveToElement(aboutLink).perform();
-            BrowserUtils.sleep(1);
+            BrowserUtils.wait(1);
             
             BrowserUtils.waitForVisibility(aboutSubmenuLinks.getFirst());
             
@@ -151,7 +151,7 @@ public class HomePage extends CommonPage {
     public boolean verifyAndClickSubmenuLink(String linkText) {
         try {
             actions.moveToElement(aboutLink).perform();
-            BrowserUtils.sleep(1);
+            BrowserUtils.wait(1);
             
             BrowserUtils.waitForVisibility(aboutSubmenuLinks.getFirst());
             logger.debug("Found {} submenu links", aboutSubmenuLinks.size());
@@ -195,7 +195,7 @@ public class HomePage extends CommonPage {
     public void hoverOverAboutLink() {
         try {
             actions.moveToElement(aboutLink).perform();
-            BrowserUtils.sleep(1);
+            BrowserUtils.wait(1);
             logger.debug("Successfully hovered over About link");
         } catch (Exception e) {
             logger.error("Error hovering over About link: {}", e.getMessage());
@@ -208,7 +208,7 @@ public class HomePage extends CommonPage {
             logger.info("Attempting to click Services link");
             BrowserUtils.waitForElementToBeClickable(servicesLink);
             actions.moveToElement(servicesLink).perform();
-            BrowserUtils.sleep(1);
+            BrowserUtils.wait(1);
             servicesLink.click();
             BrowserUtils.waitForPageToLoad(10);
             logger.info("Successfully clicked Services link");
@@ -223,7 +223,7 @@ public class HomePage extends CommonPage {
             logger.info("Attempting to click Careers link");
             BrowserUtils.waitForElementToBeClickable(careersLink);
             actions.moveToElement(careersLink).perform();
-            BrowserUtils.sleep(1);
+            BrowserUtils.wait(1);
             careersLink.click();
             BrowserUtils.waitForPageToLoad(10);
             logger.info("Successfully clicked Careers link");
@@ -238,7 +238,7 @@ public class HomePage extends CommonPage {
             logger.info("Attempting to click Contact link");
             BrowserUtils.waitForElementToBeClickable(contactLink);
             actions.moveToElement(contactLink).perform();
-            BrowserUtils.sleep(1);
+            BrowserUtils.wait(1);
             contactLink.click();
             BrowserUtils.waitForPageToLoad(10);
             logger.info("Successfully clicked Contact link");
@@ -253,7 +253,7 @@ public class HomePage extends CommonPage {
             logger.info("Attempting to click News & Events link");
             BrowserUtils.waitForElementToBeClickable(newsEventsLink);
             actions.moveToElement(newsEventsLink).perform();
-            BrowserUtils.sleep(1);
+            BrowserUtils.wait(1);
             newsEventsLink.click();
             BrowserUtils.waitForPageToLoad(10);
             logger.info("Successfully clicked News & Events link");
@@ -298,7 +298,7 @@ public class HomePage extends CommonPage {
     public void hoverOverCareersLink() {
         try {
             actions.moveToElement(careersLink).perform();
-            BrowserUtils.sleep(1);
+            BrowserUtils.wait(1);
             logger.debug("Successfully hovered over Careers link");
         } catch (Exception e) {
             logger.error("Error hovering over Careers link: {}", e.getMessage());
@@ -309,7 +309,7 @@ public class HomePage extends CommonPage {
     public void hoverOverShippersLink() {
         try {
             actions.moveToElement(shippersLink).perform();
-            BrowserUtils.sleep(1);
+            BrowserUtils.wait(1);
             logger.debug("Successfully hovered over Shippers link");
         } catch (Exception e) {
             logger.error("Error hovering over Shippers link: {}", e.getMessage());

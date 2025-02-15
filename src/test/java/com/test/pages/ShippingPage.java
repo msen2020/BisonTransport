@@ -108,14 +108,14 @@ public class ShippingPage extends CommonPage {
     //Clicking the Services link.
     public void ClickServicesLink() {
         BrowserUtils.implicitWait(10);
-        BrowserUtils.sleep(3);
+        BrowserUtils.wait(3);
         clickServicesLink.click();
     }
 
     // Clicking the ClickRequest_a_Quote
     public void ClickRequest_a_Quote() {
         BrowserUtils.implicitWait(10);
-        BrowserUtils.sleep(3);
+        BrowserUtils.wait(3);
         clickRequest_a_Quote.click();
     }
 

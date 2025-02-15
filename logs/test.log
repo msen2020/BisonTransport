@@ -1434,3 +1434,24 @@ Element: [[ChromeDriver: chrome on windows (a469113fc9a2009bf5b6de369aa829af)] -
 Session ID: a469113fc9a2009bf5b6de369aa829af
 2025-02-04 15:11:42.052 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
 2025-02-04 15:11:42.052 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-15 22:43:16.984 [main] INFO  BisonTransport - Starting scenario: LOG_01_TC_01 Verify Login Herd and iTools functionality
+2025-02-15 22:43:16.988 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-15 22:43:18.015 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-15 22:43:18.050 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-15 22:45:23.284 [main] INFO  com.test.pages.CommonPage - Navigated to Bison Transport website
+2025-02-15 22:45:23.286 [main] INFO  com.test.pages.CommonPage - Verifying page title
+2025-02-15 22:45:23.367 [main] INFO  com.test.pages.CommonPage - Successfully verified page title
+2025-02-15 22:45:23.367 [main] INFO  com.test.pages.CommonPage - Verifying Login Herd and iTools links visibility
+2025-02-15 22:45:23.677 [main] INFO  com.test.pages.CommonPage - Clicking on Login Herd link
+2025-02-15 22:45:23.677 [main] INFO  com.test.pages.CommonPage - Attempting to click Login Herd link
+2025-02-15 22:45:24.148 [main] INFO  com.test.pages.CommonPage - Successfully clicked Login Herd link
+2025-02-15 22:45:24.148 [main] INFO  com.test.pages.CommonPage - Switching to new tab
+2025-02-15 22:45:31.132 [main] INFO  com.test.pages.CommonPage - Verifying Herd login page title
+2025-02-15 22:45:31.155 [main] INFO  com.test.pages.CommonPage - Closing current tab
+2025-02-15 22:45:31.366 [main] INFO  com.test.pages.CommonPage - Clicking on Login iTools link
+2025-02-15 22:45:31.366 [main] INFO  com.test.pages.CommonPage - Attempting to click Login iTools link
+2025-02-15 22:45:31.937 [main] INFO  com.test.pages.CommonPage - Successfully clicked Login iTools link
+2025-02-15 22:45:31.944 [main] INFO  com.test.pages.CommonPage - Switching to new tab
+2025-02-15 22:45:51.174 [main] INFO  com.test.pages.CommonPage - Verifying iTools login page
+2025-02-15 22:45:51.212 [main] INFO  com.test.pages.CommonPage - Closing current tab
+2025-02-15 22:45:51.377 [main] INFO  BisonTransport - Finished scenario: LOG_01_TC_01 Verify Login Herd and iTools functionality

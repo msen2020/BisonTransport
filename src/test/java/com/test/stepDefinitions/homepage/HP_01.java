@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import static com.test.utils.BrowserUtils.getDriver;
+import static com.test.hooks.Hooks.driver;
 
 public class HP_01 extends CommonPage {
 
@@ -23,7 +23,7 @@ public class HP_01 extends CommonPage {
         List<String> expectedTitles = dataTable.asList();
         
         logger.info("Starting verification of navbar titles visibility and functionality");
-        BrowserUtils.sleep(2);
+        BrowserUtils.wait(2);
         BrowserUtils.waitForPageToLoad(25);
         
         String currentUrl = DriverManager.getInstance().getCurrentDriver().getCurrentUrl();
@@ -83,7 +83,7 @@ public class HP_01 extends CommonPage {
         List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
         
         logger.info("Starting verification of submenu links visibility and functionality");
-        BrowserUtils.sleep(2);
+        BrowserUtils.wait(2);
         BrowserUtils.waitForPageToLoad(25);
         
         for (Map<String, String> row : data) {
@@ -100,7 +100,7 @@ public class HP_01 extends CommonPage {
                 
                 // Wait for a page load and verify the title
                 BrowserUtils.waitForPageToLoad(25);
-                String actualTitle = getDriver().getTitle();
+                String actualTitle = driver().getTitle();
                 Assert.assertTrue(
                     String.format("Page title should contain '%s', but was '%s'", 
                         expectedPageTitle, actualTitle),
@@ -120,7 +120,7 @@ public class HP_01 extends CommonPage {
     @And("user clicks the menu item {string}")
     public void userClicksTheMenuItem(String menuItem) {
         logger.info("Clicking menu item: '{}'", menuItem);
-        WebElement element = getDriver().findElement(
+        WebElement element = driver().findElement(
             By.xpath("//span[contains(@class, 'x-anchor-text-primary') and text()='" + menuItem + "']")
         );
         BrowserUtils.waitAndClick(element);
@@ -129,9 +129,9 @@ public class HP_01 extends CommonPage {
 
     @Then("verify the page URL contains {string}")
     public void verifyThePageURLContains(String expectedUrlPart) {
-        BrowserUtils.sleep(2);
+        BrowserUtils.wait(2);
         BrowserUtils.waitForPageToLoad(25);
-        String currentUrl = getDriver().getCurrentUrl().toLowerCase();
+        String currentUrl = driver().getCurrentUrl().toLowerCase();
         Assert.assertTrue(
             String.format("URL should contain '%s', but was '%s'", 
                 expectedUrlPart, currentUrl),
@@ -142,9 +142,9 @@ public class HP_01 extends CommonPage {
 
     @And("verify the page title contains {string}")
     public void verifyThePageTitleContains(String expectedTitle) {
-        BrowserUtils.sleep(2);
+        BrowserUtils.wait(2);
         BrowserUtils.waitForPageToLoad(25);
-        String actualTitle = getDriver().getTitle();
+        String actualTitle = driver().getTitle();
         Assert.assertTrue(
             String.format("Page title should contain '%s', but was '%s'", 
                 expectedTitle, actualTitle),
@@ -155,10 +155,10 @@ public class HP_01 extends CommonPage {
 
     @And("verify the page heading contains {string}")
     public void verifyThePageHeadingContains(String expectedHeading) {
-        BrowserUtils.sleep(2);
+        BrowserUtils.wait(2);
         BrowserUtils.waitForPageToLoad(25);
 
-        WebElement heading = getDriver().findElement(By.cssSelector("h1.x-text-content-text-primary"));
+        WebElement heading = driver().findElement(By.cssSelector("h1.x-text-content-text-primary"));
         BrowserUtils.waitForVisibility(heading);
         
         String actualHeading = heading.getText().trim();
@@ -194,16 +194,16 @@ public class HP_01 extends CommonPage {
                 homePage().hoverOverAboutLink();
                 
                 // Click menu item
-                WebElement element = getDriver().findElement(
+                WebElement element = driver().findElement(
                     By.xpath("//span[contains(@class, 'x-anchor-text-primary') and text()='" + menuItem + "']")
                 );
                 BrowserUtils.waitAndClick(element);
                 logger.info("Clicked menu item: '{}'", menuItem);
                 
                 // Verify URL
-                BrowserUtils.sleep(2);
+                BrowserUtils.wait(2);
                 BrowserUtils.waitForPageToLoad(25);
-                String currentUrl = getDriver().getCurrentUrl().toLowerCase();
+                String currentUrl = driver().getCurrentUrl().toLowerCase();
                 Assert.assertTrue(
                     String.format("URL should contain '%s', but was '%s'", 
                         expectedUrl, currentUrl),
@@ -211,7 +211,7 @@ public class HP_01 extends CommonPage {
                 );
                 
                 // Verify page title
-                String actualTitle = getDriver().getTitle();
+                String actualTitle = driver().getTitle();
                 Assert.assertTrue(
                     String.format("Page title should contain '%s', but was '%s'", 
                         expectedTitle, actualTitle),
@@ -219,7 +219,7 @@ public class HP_01 extends CommonPage {
                 );
                 
                 // Verify heading
-                WebElement heading = getDriver().findElement(By.cssSelector("h1.x-text-content-text-primary"));
+                WebElement heading = driver().findElement(By.cssSelector("h1.x-text-content-text-primary"));
                 BrowserUtils.waitForVisibility(heading);
                 String actualHeading = heading.getText().trim();
                 Assert.assertTrue(
@@ -258,28 +258,28 @@ public class HP_01 extends CommonPage {
                 homePage().hoverOverCareersLink();
                 
                 // Store the current window handle
-                String mainWindow = getDriver().getWindowHandle();
+                String mainWindow = driver().getWindowHandle();
                 
                 // Click menu item
-                WebElement element = getDriver().findElement(
+                WebElement element = driver().findElement(
                     By.xpath("//span[contains(@class, 'x-anchor-text-primary') and text()='" + menuItem + "']")
                 );
                 BrowserUtils.waitAndClick(element);
                 logger.info("Clicked menu item: '{}'", menuItem);
                 
                 // Switch to new tab
-                BrowserUtils.sleep(2);
-                Set<String> windowHandles = getDriver().getWindowHandles();
+                BrowserUtils.wait(2);
+                Set<String> windowHandles = driver().getWindowHandles();
                 String newWindow = windowHandles.stream()
                     .filter(handle -> !handle.equals(mainWindow))
                     .findFirst()
                     .orElseThrow(() -> new RuntimeException("New window was not opened"));
-                getDriver().switchTo().window(newWindow);
+                driver().switchTo().window(newWindow);
                 
                 // Verify URL
-                BrowserUtils.sleep(2);
+                BrowserUtils.wait(2);
                 BrowserUtils.waitForPageToLoad(25);
-                String currentUrl = getDriver().getCurrentUrl();
+                String currentUrl = driver().getCurrentUrl();
                 Assert.assertEquals(
                     String.format("URL should be '%s', but was '%s'", 
                         expectedUrl, currentUrl),
@@ -288,7 +288,7 @@ public class HP_01 extends CommonPage {
                 );
                 
                 // Verify page title
-                String actualTitle = getDriver().getTitle();
+                String actualTitle = driver().getTitle();
                 Assert.assertTrue(
                     String.format("Page title should contain '%s', but was '%s'", 
                         expectedTitle, actualTitle),
@@ -296,7 +296,7 @@ public class HP_01 extends CommonPage {
                 );
                 
                 // Verify heading
-                WebElement heading = getDriver().findElement(By.cssSelector("h1"));
+                WebElement heading = driver().findElement(By.cssSelector("h1"));
                 BrowserUtils.waitForVisibility(heading);
                 String actualHeading = heading.getText().trim();
                 Assert.assertTrue(
@@ -309,8 +309,8 @@ public class HP_01 extends CommonPage {
                     menuItem, expectedUrl, expectedTitle, expectedHeading);
                 
                 // Close the new tab and switch back to the main window
-                getDriver().close();
-                getDriver().switchTo().window(mainWindow);
+                driver().close();
+                driver().switchTo().window(mainWindow);
                 
             } catch (Exception e) {
                 logger.error("Error verifying menu item '{}': {}", menuItem, e.getMessage());
@@ -337,10 +337,10 @@ public class HP_01 extends CommonPage {
                 // Hover over Shippers link and wait for submenu
                 logger.info("Verifying menu item: '{}'", menuItem);
                 homePage().hoverOverShippersLink();
-                BrowserUtils.sleep(3); // Increased wait for submenu animation
+                BrowserUtils.wait(3); // Increased wait for submenu animation
                 
                 // Store the current window handle
-                String mainWindow = getDriver().getWindowHandle();
+                String mainWindow = driver().getWindowHandle();
                 
                 // Click menu item with retry logic
                 int maxRetries = 3;
@@ -349,12 +349,12 @@ public class HP_01 extends CommonPage {
                 
                 while (!clicked && retryCount < maxRetries) {
                     try {
-                        WebElement element = getDriver().findElement(
+                        WebElement element = driver().findElement(
                             By.xpath("//span[contains(@class, 'x-anchor-text-primary') and text()='" + menuItem + "']")
                         );
                         if (!element.isDisplayed()) {
                             homePage().hoverOverShippersLink(); // Hover again if element not visible
-                            BrowserUtils.sleep(2); // Increased wait after hover
+                            BrowserUtils.wait(2); // Increased wait after hover
                         }
                         BrowserUtils.waitAndClick(element);
                         clicked = true;
@@ -364,32 +364,32 @@ public class HP_01 extends CommonPage {
                         if (retryCount == maxRetries) {
                             throw e;
                         }
-                        BrowserUtils.sleep(2); // Increased wait between retries
+                        BrowserUtils.wait(2); // Increased wait between retries
                     }
                 }
                 
                 // Switch to new tab with increased wait
-                BrowserUtils.sleep(5); // Increased wait for new tab
-                Set<String> windowHandles = getDriver().getWindowHandles();
+                BrowserUtils.wait(5); // Increased wait for new tab
+                Set<String> windowHandles = driver().getWindowHandles();
                 String newWindow = windowHandles.stream()
                     .filter(handle -> !handle.equals(mainWindow))
                     .findFirst()
                     .orElseThrow(() -> new RuntimeException("New window was not opened"));
-                getDriver().switchTo().window(newWindow);
+                driver().switchTo().window(newWindow);
                 
-                // Wait for page load with increased timeout
+                // Wait for a page load with increased timeout
                 BrowserUtils.waitForPageToLoad(45); // Increased page load timeout
                 
                 // Additional wait for JavaScript completion
-                ((JavascriptExecutor) getDriver()).executeScript("return document.readyState").equals("complete");
+                ((JavascriptExecutor) driver()).executeScript("return document.readyState").equals("complete");
                 
                 // Verify URL with retry
-                BrowserUtils.sleep(3);
-                String currentUrl = getDriver().getCurrentUrl();
+                BrowserUtils.wait(3);
+                String currentUrl = driver().getCurrentUrl();
                 int urlRetries = 0;
                 while (!currentUrl.equals(expectedUrl) && urlRetries < 3) {
-                    BrowserUtils.sleep(2);
-                    currentUrl = getDriver().getCurrentUrl();
+                    BrowserUtils.wait(2);
+                    currentUrl = driver().getCurrentUrl();
                     urlRetries++;
                 }
                 Assert.assertEquals(
@@ -400,7 +400,7 @@ public class HP_01 extends CommonPage {
                 );
                 
                 // Verify page title
-                String actualTitle = getDriver().getTitle();
+                String actualTitle = driver().getTitle();
                 Assert.assertTrue(
                     String.format("Page title should contain '%s', but was '%s'", 
                         expectedTitle, actualTitle),
@@ -408,7 +408,7 @@ public class HP_01 extends CommonPage {
                 );
                 
                 // Verify heading
-                WebElement heading = getDriver().findElement(By.cssSelector("h1.x-text-content-text-primary"));
+                WebElement heading = driver().findElement(By.cssSelector("h1.x-text-content-text-primary"));
                 BrowserUtils.waitForVisibility(heading);
                 String actualHeading = heading.getText().trim();
                 Assert.assertTrue(
@@ -421,9 +421,9 @@ public class HP_01 extends CommonPage {
                     menuItem, expectedUrl, expectedTitle, expectedHeading);
                 
                 // Close new tab and switch back with increased wait
-                getDriver().close();
-                getDriver().switchTo().window(mainWindow);
-                BrowserUtils.sleep(3); // Increased wait after switching back
+                driver().close();
+                driver().switchTo().window(mainWindow);
+                BrowserUtils.wait(3); // Increased wait after switching back
                 
             } catch (Exception e) {
                 logger.error("Error verifying menu item '{}': {}", menuItem, e.getMessage());
