@@ -31,8 +31,7 @@ public class Hooks {
             logger.error("Scenario failed: {}", scenario.getName());
             // Add a screenshot capture logic here if needed
         }
-        logger.info("Finished scenario: {}", scenario.getName());
-        // DriverManager.getInstance().quitDriver();  // Commented out to keep the browser open
+        logger.info("Finished scenario: {}. The browser will remain open.", scenario.getName());
         actions = null; // Clean up the actions instance
     }
 

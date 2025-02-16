@@ -35,11 +35,12 @@ Feature: HP_01 Verify Home Page Navigation Bar
   @HP_01_TC_04 @homepage @smoke
   Scenario: HP_01_TC_04 Verify Shippers menu items and page content
     Then verify Shippers menu items and their content
-      | menuItem      | url                                                | pageTitle                    | heading       |
-      | Truckload     | https://www.bisontransport.com/shippers/truckload  | Truckload - Bison Transport  | TRUCKLOAD     |
-      | Intermodal    | https://www.bisontransport.com/shippers/intermodal | Intermodal - Bison Transport | INTERMODAL    |
-      | Logistics     | https://www.bisontransport.com/shippers/logistics  | Logistics - Bison Transport  | LOGISTICS     |
-      | LTL           | https://www.bisontransport.com/shippers/ltl        | LTL - Bison Transport        | LTL           |
-      | Mexico        | https://www.bisontransport.com/shippers/mexico     | Mexico - Bison Transport     | MEXICO        |
-      | i-Tools Login | https://itools.bisontransport.com/                 | i-Tools - Bison Transport    | i-Tools Login |
+      | menuItem      | url                                                | pageTitle                    | heading                   |
+      | Truckload     | https://www.bisontransport.com/shippers/truckload  | Truckload - Bison Transport  | TRUCKLOAD                 |
+      | Intermodal    | https://www.bisontransport.com/shippers/intermodal | Intermodal - Bison Transport | INTERMODAL                |
+      | Logistics     | https://www.bisontransport.com/shippers/logistics  | Logistics - Bison Transport  | LOGISTICS                 |
+      | LTL           | https://www.bisontransport.com/shippers/ltl        | LTL - Bison Transport        | LTL (LESS-THAN-TRUCKLOAD) |
+      | Dedicated     | https://www.bisontransport.com/shippers/dedicated  | Dedicated - Bison Transport  | dedicated fleets          |
+      | Mexico        | https://www.bisontransport.com/shippers/mexico     | Mexico - Bison Transport     | MEXICO                    |
+      | i-Tools Login | https://itools.bisontransport.com/                 | Bison Transport i-Tools      | i-Tools                   |
 

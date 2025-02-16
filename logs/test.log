@@ -1546,3 +1546,74 @@ Session ID: e23d0e3c9ff08244e69b8c20abb936ef
 2025-02-16 00:39:05.427 [main] INFO  com.test.pages.CommonPage - Verifying iTools login page
 2025-02-16 00:39:05.464 [main] INFO  com.test.pages.CommonPage - Closing current tab
 2025-02-16 00:39:05.630 [main] INFO  BisonTransport - Finished scenario: LOG_01_TC_01 Verify Login Herd and iTools functionality
+2025-02-16 00:43:54.199 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:43:54.199 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-16 00:43:54.688 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-16 00:43:54.741 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-16 00:44:30.877 [main] INFO  com.test.pages.CommonPage - Starting verification of Shippers menu items and their content
+2025-02-16 00:44:30.877 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Truckload'
+2025-02-16 00:45:06.916 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Truckload'
+2025-02-16 00:45:15.110 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Truckload' - URL: https://www.bisontransport.com/shippers/truckload, Title: Truckload - Bison Transport, Heading: TRUCKLOAD
+2025-02-16 00:45:18.437 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Intermodal'
+2025-02-16 00:45:18.481 [main] ERROR com.test.pages.CommonPage - Error hovering over Shippers link: java.lang.reflect.InvocationTargetException
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f8e5135f42eba60b32b3ab41b233927d, actions {actions=[org.openqa.selenium.interactions.Sequence@701bc94e]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62112}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62112/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f8e5135f42eba60b32b3ab41b233927d
+2025-02-16 00:45:18.483 [main] ERROR com.test.pages.CommonPage - Error verifying menu item 'Intermodal': java.lang.reflect.InvocationTargetException
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f8e5135f42eba60b32b3ab41b233927d, actions {actions=[org.openqa.selenium.interactions.Sequence@701bc94e]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62112}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62112/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f8e5135f42eba60b32b3ab41b233927d
+2025-02-16 00:45:18.521 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:45:18.521 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:51:12.332 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:51:12.343 [main] INFO  BisonTransport - Initializing WebDriver for browser: chrome
+2025-02-16 00:51:12.823 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-16 00:51:12.872 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Windows\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-16 00:51:18.710 [main] INFO  com.test.pages.CommonPage - Starting verification of Shippers menu items and their content
+2025-02-16 00:51:18.710 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Truckload'
+2025-02-16 00:52:50.990 [main] INFO  com.test.pages.CommonPage - Clicked menu item: 'Truckload'
+2025-02-16 00:52:59.168 [main] INFO  com.test.pages.CommonPage - Successfully verified menu item 'Truckload' - URL: https://www.bisontransport.com/shippers/truckload, Title: Truckload - Bison Transport, Heading: TRUCKLOAD
+2025-02-16 00:53:02.397 [main] INFO  com.test.pages.CommonPage - Verifying menu item: 'Intermodal'
+2025-02-16 00:53:02.418 [main] ERROR com.test.pages.CommonPage - Error hovering over Shippers link: java.lang.reflect.InvocationTargetException
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [83ef110b1b81ae5d5e98860362634db0, actions {actions=[org.openqa.selenium.interactions.Sequence@27a97e08]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62321}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62321/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 83ef110b1b81ae5d5e98860362634db0
+2025-02-16 00:53:02.418 [main] ERROR com.test.pages.CommonPage - Error verifying menu item 'Intermodal': java.lang.reflect.InvocationTargetException
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [83ef110b1b81ae5d5e98860362634db0, actions {actions=[org.openqa.selenium.interactions.Sequence@27a97e08]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62321}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62321/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 83ef110b1b81ae5d5e98860362634db0
+2025-02-16 00:53:02.457 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:53:02.459 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:57:56.460 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:57:56.525 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:57:56.525 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:58:15.145 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:58:15.216 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:58:15.218 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:58:27.017 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:58:27.074 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:58:27.074 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:58:36.993 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:58:37.068 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 00:58:37.068 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 01:00:13.203 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 01:00:13.275 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 01:00:13.275 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 01:00:56.037 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 01:00:56.110 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 01:00:56.110 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 15:56:07.808 [main] INFO  BisonTransport - Starting scenario: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 15:56:07.896 [main] ERROR BisonTransport - Scenario failed: HP_01_TC_04 Verify Shippers menu items and page content
+2025-02-16 15:56:07.896 [main] INFO  BisonTransport - Finished scenario: HP_01_TC_04 Verify Shippers menu items and page content

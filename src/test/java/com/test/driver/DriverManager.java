@@ -28,16 +28,16 @@ public class DriverManager {
             logger.info("Initializing WebDriver for browser: {}", browser);
             switch (browser.toLowerCase()) {
                 case "chrome" -> {
-                    WebDriverManager.chromedriver().create();
+                    WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                 }
                 case "firefox" -> {
-                    WebDriverManager.firefoxdriver().create();
+                    WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                 }
                 default -> {
                     logger.warn("Unsupported browser: {}. Defaulting to Chrome", browser);
-                    WebDriverManager.chromedriver().create();
+                    WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                 }
             }
@@ -52,9 +52,9 @@ public class DriverManager {
 
     public void quitDriver() {
         if (driver != null) {
-            logger.info("Cleaning up WebDriver instance");
+            logger.info("Cleaning up WebDriver instance. The browser will remain open.");
             // driver.quit();  // Commented out to keep the browser open
-            driver = null;
+//            driver = null;
         }
     }
 } 

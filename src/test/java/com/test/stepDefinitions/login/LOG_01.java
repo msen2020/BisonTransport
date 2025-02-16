@@ -19,10 +19,7 @@ public class LOG_01 extends CommonPage {
         logger.info("Actual page title: {}", actualTitle); // Log the actual title
 
         String expectedTitle = "Bison | North America's Trusted Supply Chain Solution";
-        Assert.assertTrue(
-                String.format("Page title should be '%s'", expectedTitle),
-                actualTitle.equals(expectedTitle) // Compare actual title with expected title
-        );
+        Assert.assertEquals(String.format("Page title should be '%s'", expectedTitle), expectedTitle, actualTitle);
 
         logger.info("Successfully verified page title");
     }
@@ -53,8 +50,8 @@ public class LOG_01 extends CommonPage {
         BrowserUtils.switchToNewWindow();
     }
 
-    @Then("user verifies the title of the Herd login page")
-    public void userVerifiesTheTitleOfTheHerdLoginPage() {
+    @Then("user verifies the title on Herd login page")
+    public void userVerifiesTheTitleOnHerdLoginPage() {
         logger.info("Verifying Herd login page title");
         String pageTitle = BrowserUtils.getPageTitle();
         boolean titleMatches = pageTitle.contains("Welcome to Bison Transport: Login") ||
@@ -73,12 +70,18 @@ public class LOG_01 extends CommonPage {
         BrowserUtils.waitForPageToLoad(25);
     }
 
-    @Then("user verifies the title of the iTools login page")
-    public void userVerifiesTheTitleOfTheIToolsLoginPage() {
+    @Then("user verifies the title on the iTools login page")
+    public void userVerifiesTheTitleOnTheIToolsLoginPage() {
         logger.info("Verifying iTools login page");
         BrowserUtils.waitForPageToLoad(25);
         String pageText = driver().getPageSource();
         Assert.assertTrue("Should see 'Customer Login' on iTools page",
             pageText.contains("Customer Login"));
+
+        // Check the URL
+        String currentUrl = driver().getCurrentUrl();
+        String expectedUrl = "https://itools.bisontransport.com/";
+        Assert.assertTrue("URL should start with '" + expectedUrl + "', but was '" + currentUrl + "'",
+            currentUrl.startsWith(expectedUrl));
     }
 }

@@ -271,4 +271,12 @@ public class BrowserUtils {
             return false;
         }
     }
+
+    /**
+     * Returns a WebDriverWait instance with a default timeout.
+     * @return WebDriverWait instance
+     */
+    public static WebDriverWait getWait() {
+        return new WebDriverWait(DriverManager.getInstance().getCurrentDriver(), Duration.ofSeconds(DEFAULT_TIMEOUT_SECONDS));
+    }
 } 
