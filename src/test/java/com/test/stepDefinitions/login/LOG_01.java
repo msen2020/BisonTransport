@@ -4,8 +4,6 @@ import com.test.pages.CommonPage;
 import com.test.utils.BrowserUtils;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import static com.test.hooks.Hooks.driver;
 
