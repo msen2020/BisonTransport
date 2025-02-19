@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
     glue = {"com.test.stepDefinitions", "com.test.hooks"},
     plugin = {"pretty", "html:target/cucumber-reports"},
     monochrome = false,
-    tags = "@HP_01_TC_04"
+    tags = "@LOG_02_TC_01"
 )
 public class TestRunner {
 } 

@@ -4,6 +4,8 @@ import com.test.pages.CommonPage;
 import com.test.utils.BrowserUtils;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import static com.test.hooks.Hooks.driver;
 
@@ -43,6 +45,21 @@ public class LOG_01 extends CommonPage {
         loginPage().clickLoginITools();
     }
 
+    @Then("user verifies the title on the iTools login page")
+    public void userVerifiesTheTitleOnTheIToolsLoginPage() {
+        logger.info("Verifying iTools login page");
+        BrowserUtils.waitForPageToLoad(25);
+        String pageText = driver().getPageSource();
+        Assert.assertTrue("Should see 'Customer Login' on iTools page",
+                pageText.contains("Customer Login"));
+
+        // Check the URL
+        String currentUrl = driver().getCurrentUrl();
+        String expectedUrl = "https://itools.bisontransport.com/";
+        Assert.assertTrue("URL should start with '" + expectedUrl + "', but was '" + currentUrl + "'",
+                currentUrl.startsWith(expectedUrl));
+    }
+
     @And("user switches the new tab")
     public void userSwitchesTheNewTab() {
         logger.info("Switching to new tab");
@@ -68,20 +85,5 @@ public class LOG_01 extends CommonPage {
         driver().close();
         BrowserUtils.switchToMainWindow();
         BrowserUtils.waitForPageToLoad(25);
-    }
-
-    @Then("user verifies the title on the iTools login page")
-    public void userVerifiesTheTitleOnTheIToolsLoginPage() {
-        logger.info("Verifying iTools login page");
-        BrowserUtils.waitForPageToLoad(25);
-        String pageText = driver().getPageSource();
-        Assert.assertTrue("Should see 'Customer Login' on iTools page",
-            pageText.contains("Customer Login"));
-
-        // Check the URL
-        String currentUrl = driver().getCurrentUrl();
-        String expectedUrl = "https://itools.bisontransport.com/";
-        Assert.assertTrue("URL should start with '" + expectedUrl + "', but was '" + currentUrl + "'",
-            currentUrl.startsWith(expectedUrl));
     }
 }

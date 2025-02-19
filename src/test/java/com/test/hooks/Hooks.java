@@ -10,11 +10,14 @@ import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Random;
+
 public class Hooks {
     public static final Logger logger = LoggerFactory.getLogger("BisonTransport");
     public static Actions actions;
     public static WebDriver driver;
     public static String baseUrl;
+    public static Random random = new Random();
 
     @Before
     public void setUp(Scenario scenario) {

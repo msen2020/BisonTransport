@@ -1,6 +1,6 @@
-@LOG_01
-@msen
-@login
+# LOG_01 Verify Login Herd and iTools functionality
+
+@LOG_01 @msen @login
 Feature: Login
 
   @LOG_01_TC_01

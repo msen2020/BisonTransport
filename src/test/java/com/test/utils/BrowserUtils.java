@@ -1,6 +1,8 @@
 package com.test.utils;
 
+import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -238,7 +240,6 @@ public class BrowserUtils {
 
     /**
      * Waits for an element to be visible and verifies it's displayed
-     * 
      * @param element the element to check
      * @return true if an element is visible and displayed
      */
@@ -248,15 +249,17 @@ public class BrowserUtils {
             boolean isDisplayed = element.isDisplayed();
             logger.debug("Element display status: {}", isDisplayed);
             return isDisplayed;
+        } catch (NoSuchElementException e) {
+            logger.error("Element not found: {}", element);
+            Assert.fail("Element not found: " + element);
+            return false;
         } catch (Exception e) {
             logger.error("Error verifying element display: {}", e.getMessage());
             return false;
         }
     }
 
-    /**
-     * Waits for element to be clickable and clicks it
-     * 
+    /*** Waits for an element to be clickable and clicks it
      * @param element the element to click
      * @return true if click was successful
      */

@@ -12,6 +12,9 @@ public class LoginPage extends CommonPage {
     @FindBy(css = "a[href*='itools.bison']")
     private WebElement loginIToolsLink;
 
+    @FindBy(css = "")
+    private WebElement customerLoginTitle;
+
     public boolean isLoginHerdVisible() {
         try {
             BrowserUtils.waitForVisibility(loginHerdLink);
